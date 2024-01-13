@@ -16,7 +16,7 @@ namespace lab1
         {
             InitializeComponent();
             //start
-            //newedit
+            //newedit2
         }
     }
 }
