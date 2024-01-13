@@ -1,0 +1,8 @@
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\bin\Debug\Lecture11Exercise3.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\bin\Debug\Lecture11Exercise3.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\bin\Debug\Lecture11Exercise3.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\obj\Debug\Lecture11Exercise3.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\obj\Debug\Lecture11Exercise3.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\obj\Debug\Lecture11Exercise3.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\obj\Debug\Lecture11Exercise3.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\InClassDemos\Lecture11Exercise3\Lecture11Exercise3\obj\Debug\Lecture11Exercise3.pdb

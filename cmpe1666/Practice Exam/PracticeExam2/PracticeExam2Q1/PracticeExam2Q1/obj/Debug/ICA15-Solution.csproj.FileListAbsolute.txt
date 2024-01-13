@@ -1,0 +1,10 @@
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\bin\Debug\ICA15-Solution.exe.config
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\bin\Debug\ICA15-Solution.exe
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\bin\Debug\ICA15-Solution.pdb
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\obj\Debug\ICA15-Solution.csproj.AssemblyReference.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\obj\Debug\ICA15_Solution.Form1.resources
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\obj\Debug\ICA15_Solution.Properties.Resources.resources
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\obj\Debug\ICA15-Solution.csproj.GenerateResource.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\obj\Debug\ICA15-Solution.csproj.CoreCompileInputs.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\obj\Debug\ICA15-Solution.exe
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\ICASolutions\ICA15-Solution\ICA15-Solution\obj\Debug\ICA15-Solution.pdb

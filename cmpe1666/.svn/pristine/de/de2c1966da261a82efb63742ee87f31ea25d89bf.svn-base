@@ -1,0 +1,105 @@
+﻿namespace Event_Consolidations
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.UI_red = new System.Windows.Forms.RadioButton();
+            this.UI_blue = new System.Windows.Forms.RadioButton();
+            this.UI_green = new System.Windows.Forms.RadioButton();
+            this.UI_readonly = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // UI_red
+            // 
+            this.UI_red.AutoSize = true;
+            this.UI_red.Location = new System.Drawing.Point(76, 66);
+            this.UI_red.Name = "UI_red";
+            this.UI_red.Size = new System.Drawing.Size(45, 17);
+            this.UI_red.TabIndex = 0;
+            this.UI_red.TabStop = true;
+            this.UI_red.Text = "Red";
+            this.UI_red.UseVisualStyleBackColor = true;
+            this.UI_red.CheckedChanged += new System.EventHandler(this.UI_red_CheckedChanged);
+            // 
+            // UI_blue
+            // 
+            this.UI_blue.AutoSize = true;
+            this.UI_blue.Location = new System.Drawing.Point(76, 90);
+            this.UI_blue.Name = "UI_blue";
+            this.UI_blue.Size = new System.Drawing.Size(46, 17);
+            this.UI_blue.TabIndex = 1;
+            this.UI_blue.TabStop = true;
+            this.UI_blue.Text = "Blue";
+            this.UI_blue.UseVisualStyleBackColor = true;
+            this.UI_blue.CheckedChanged += new System.EventHandler(this.UI_blue_CheckedChanged);
+            // 
+            // UI_green
+            // 
+            this.UI_green.AutoSize = true;
+            this.UI_green.Location = new System.Drawing.Point(76, 113);
+            this.UI_green.Name = "UI_green";
+            this.UI_green.Size = new System.Drawing.Size(54, 17);
+            this.UI_green.TabIndex = 2;
+            this.UI_green.TabStop = true;
+            this.UI_green.Text = "Green";
+            this.UI_green.UseVisualStyleBackColor = true;
+            this.UI_green.CheckedChanged += new System.EventHandler(this.UI_green_CheckedChanged);
+            // 
+            // UI_readonly
+            // 
+            this.UI_readonly.Location = new System.Drawing.Point(302, 89);
+            this.UI_readonly.Name = "UI_readonly";
+            this.UI_readonly.ReadOnly = true;
+            this.UI_readonly.Size = new System.Drawing.Size(251, 20);
+            this.UI_readonly.TabIndex = 3;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UI_readonly);
+            this.Controls.Add(this.UI_green);
+            this.Controls.Add(this.UI_blue);
+            this.Controls.Add(this.UI_red);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.RadioButton UI_red;
+        private System.Windows.Forms.RadioButton UI_blue;
+        private System.Windows.Forms.RadioButton UI_green;
+        private System.Windows.Forms.TextBox UI_readonly;
+    }
+}
+

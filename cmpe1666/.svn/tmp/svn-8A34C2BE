@@ -1,0 +1,125 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Drawing;
+using GDIDrawer;
+using System.Drawing.Printing;
+using System.Security.Authentication.ExtendedProtection;
+
+namespace lab1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double num;// stores user input
+            double[] count = { };//empty array to store counted money
+
+            Console.WriteLine("\t\t\tSteven Santiago - Lab1");
+            GetValue("How much money do you wish to convert", out num);//prompt user to convert money
+            Console.WriteLine(num);// display total amount on console
+            count = GetCash(num);//stored counted money
+            DisplayCash(num, count);//display cash in gdi drawer
+            Console.ReadKey();
+        }
+        static double GetValue(string prompt, out double num)
+        {
+            string input;// string message
+            do
+            {
+                //prompt user input
+                Console.WriteLine(prompt);
+                input = Console.ReadLine();
+                input = input.Replace("$", " ");// check if user entered $ or white space
+                double.TryParse(input, out num);
+
+                //check if user input for invalid values
+                if (!double.TryParse(input, out num))
+                    Console.WriteLine("Invalid input.");
+
+                //loop until conditions are met
+            } while (!double.TryParse(input, out num));
+
+            //return int
+            return num;
+        }
+        static double[] GetCash(double num)
+        {
+            double[] array = { 50, 20, 10, 5, 2, 1, 0.25, 0.10, 0.05 };//numbers to divide total
+            double[] count = new double[array.Length];//counter array to count index value
+            string[] note = { "fifty", "twenty", "ten", "five", "toonie", "loonie", "quarter", "dime", "nickel" };//display message on console
+
+            //loop through each index value if total input is divisable
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (num >= array[i])//check if number is divisable
+                {
+
+                    count[i] = num / array[i];
+                    num = num % array[i];
+                    num = Math.Round(num, 2);//round number to nearest nickel
+                }
+            }
+
+            //print amount of cash on console
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(note[i] + " x " + (int)count[i]);
+            }
+            return count ;
+        }
+        static void DisplayCash(double num, double[] count)
+        {
+            //create canvas
+            CDrawer canvas = new CDrawer();
+
+            // array of colors to match each note
+            Color[] colors = {Color.Red, Color.Green, Color.Purple, Color.LightBlue, Color.YellowGreen, Color.YellowGreen,
+            Color.Yellow, Color.Gray,Color.Gray,Color.Gray};
+
+            //string notes to display
+            string[] note = { "$50 x", "$20 x ", "$10 x ", "$5 x ", "$2 x ", "$1 x " ,"$0.25 x ", "$0.10 x ", "$0.05 x " };
+            //cash coordinates
+            int[] y = { 100, 200, 300, 400, 500, 100, 200, 300, 400 };
+            int[] x = { 200, 200, 200, 200, 200, 600, 600, 600, 600 };
+
+            //place location for columns and rows of notes
+            for (int xAndY = 0; xAndY < y.Length; xAndY++)
+            {
+                //place notes in location
+                for (int i = 0; i < count.Length; i++)
+                {
+                    //check if index value of cash has a value
+                    if (count[i] >= 1)
+                    {
+
+                        string amount = note[i] + $" {(int)count[i]}";//type cast number of cash as string
+                        if (i < 4)//locate where to print note
+                        {
+                            canvas.AddCenteredRectangle(x[xAndY], y[xAndY], 200, 95, colors[i], 2, Color.Gray); //print bills
+                            canvas.AddText(amount, 15, x[xAndY] / 2, y[xAndY] - 50, 200, 100, Color.Black);//print note amount
+                            count[i] = 0;//change index value to move into the next value
+
+                        }
+                        else if (i > 3 && i < 9)//move to next column if the first column is full
+                        {
+                            canvas.AddCenteredEllipse(x[xAndY], y[xAndY], 100, 100, colors[i]);//print bill
+                            canvas.AddText(amount, 15, x[xAndY] - 50, y[xAndY] - 50, 100, 100, Color.Black);//print note amount
+                            count[i] = 0;//change index value to move into the next value
+
+                        }
+                        //force loop to end after both string and shape is printed
+                        i += (count.Length);
+                    }
+
+                }
+
+            }
+
+        }
+        }
+}
+
+

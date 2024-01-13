@@ -1,0 +1,24 @@
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.AssemblyReference.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.SuggestedBindingRedirects.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.Form1.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.ModelessDialog.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\LabExam1Q2.Properties.Resources.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.GenerateResource.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.CoreCompileInputs.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\LabExam1Q2.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\LabExam1Q2.pdb
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\bin\Debug\LabExam1Q2.exe.config
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\bin\Debug\LabExam1Q2.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q1-Solution\PracticeExam3Q1\bin\Debug\LabExam1Q2.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\bin\Debug\LabExam1Q2.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\bin\Debug\LabExam1Q2.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\bin\Debug\LabExam1Q2.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.Form1.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.ModelessDialog.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\LabExam1Q2.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\PracticeExam3Q1.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\LabExam1Q2.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q1-Solution\PracticeExam3Q1\obj\Debug\LabExam1Q2.pdb

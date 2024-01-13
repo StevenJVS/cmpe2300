@@ -1,0 +1,338 @@
+﻿
+//***********************************************************************************
+//Program: Sorting Structs
+//Description: Sorts Emplyee id and salary
+//Date: 03/05/23
+//Author: Steven Santiago
+//Course: CMPE1666
+//Class: CNTA02
+//***********************************************************************************
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+
+namespace ica9
+{
+    public partial class Form1 : Form
+    {
+        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();//stopwatch
+        StreamReader sr;//stream reader
+        //Employees Struct
+        public struct Employees
+        {
+            public int _id;//employee id
+            public int _salary;// salary
+            public string display;//string format
+
+            //constructor to assign default values
+            public Employees(int id, int salary)
+            {
+                //save 
+                _id = id;
+                _salary = salary;
+                display = $"{id}:    {salary}";
+            }
+
+        }
+        List<Employees> datalist;//provided list
+        List<Employees> files;//list from files
+        List<Employees> copy;//copy of lists to sort
+
+        //provided values
+        int[] employee_id = {28, 53, 12, 18, 8, 2, 19, 57, 62, 34, 23, 14,
+        48, 35, 55, 22, 26, 15, 7, 9, 32, 43, 41, 51};
+        int[] salary = {4500, 2800, 1900, 3100, 7000, 3500, 2200, 2800, 2850,
+        3150, 4000, 4500, 6000, 7200, 3700, 2100, 2450, 2500, 3250, 3700,
+        3800, 4200, 4100, 3900};
+        public Form1()
+        {
+            InitializeComponent();
+            //creat lists
+            files= new List<Employees> ();
+            datalist = new List<Employees> ();
+            copy = new List<Employees>();
+            sw.Stop ();//stop stopwatch
+        }
+        //********************************************************************************************
+        //Method: UI_loadfiles_Click
+        //Purpose: Add string to unsorted and sorted list
+        //Returns:
+        //*********************************************************************************************
+        private void UI_loadfiles_Click(object sender, EventArgs e)
+        {
+            string sInput;//file line input
+            int num;//line input as int
+            //create 2 empty lists to store values from files
+            List<int> num1 = new List<int>();
+            List<int> num2 = new List<int>();
+
+            //clear initial values in list
+            copy.Clear();
+            files.Clear ();
+            if (UI_Rfiledata.Checked)
+            {
+                UI_openFileDialog1 = new OpenFileDialog();//open file dialog
+                if (UI_openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    //read selected file
+                    sr = new StreamReader(UI_openFileDialog1.FileName);
+                    //read each line until there is an empty line
+                    while ((sInput = sr.ReadLine()) != null)
+                    {
+                        //convert string into int
+                        int.TryParse(sInput, out num);
+                        num1.Add(num);//add value to list
+                    }
+                }
+                if (UI_openFileDialog2.ShowDialog() == DialogResult.OK)
+                {
+                    sr = new StreamReader(UI_openFileDialog2.FileName);//open file dialog
+                    //read each line until there is an empty line
+                    while ((sInput = sr.ReadLine()) != null)
+                    {
+                        //convert string into int
+                        int.TryParse(sInput, out num);
+                        num2.Add(num);//add value to list
+                    }
+                }
+                //go through list length
+                for (int i = 0; i < num1.Count; i++)
+                {
+                    //add contents to files list, copy of list and display contents in unsorted listbox
+                    files.Add(new Employees(num1[i], num2[i]));
+                    copy.Add(new Employees(num1[i], num2[i]));
+                    UI_unsortedlist.Items.Add(files[i].display);
+                }
+                
+            }            
+        }
+        //********************************************************************************************
+        //Method: UI_radio
+        //Purpose: check for radio button
+        //Returns:
+        //*********************************************************************************************
+        private void UI_radio(object sender, EventArgs e)
+        {
+            if (UI_Rprovided.Checked)
+            {
+                //clear contents of provided list and copy
+
+                UI_unsortedlist.Items.Clear();
+                UI_loadfiles.Enabled = false;//disable load files button
+                
+
+            }
+            if(UI_Rfiledata.Checked)
+            {
+                //clear copy of list and unsorted list
+                copy.Clear();
+                UI_unsortedlist.Items.Clear();
+                UI_loadfiles.Enabled = true;//enable load files button
+            }
+        }
+        //********************************************************************************************
+        //Method: bubblesort-Click
+        //Purpose: sort list
+        //Parameters: List<int> mylist
+        //Returns:sorted list
+        //*********************************************************************************************
+        private void UI_bubblesort_Click(object sender, EventArgs e)
+        {
+            //clear sorted list box
+            UI_sortedlist.Items.Clear();
+            sw.Start();//start timer
+            if (UI_Rprovided.Checked)//provided raido button is checked
+            {
+                bubblesort(copy);//bubble sort list
+                //display sorted list to list box
+                foreach (Employees emp in copy)
+                {
+                    UI_sortedlist.Items.Add(emp.display);
+                }
+            }
+            if (UI_Rfiledata.Checked)//files radio button is checked
+            {
+                bubblesort(copy);//bubble sort list
+                //display sorted list to list box
+                foreach (Employees emp in copy)
+                {
+                    UI_sortedlist.Items.Add(emp.display);
+                }
+            }
+            sw.Stop();//stop timer
+            long ElapsedTime = sw.ElapsedTicks;//store timer ticks
+            UI_elapsed_lbl.Text = ElapsedTime.ToString();//diplay timer to label
+            sw.Reset();//reset timer
+        }
+        //********************************************************************************************
+        //Method: UI_quicksort_Click
+        //Purpose: quick sort copied file
+        //Returns:
+        //*********************************************************************************************
+        private void UI_quicksort_Click(object sender, EventArgs e)
+        {
+            UI_sortedlist.Items.Clear();//claer sorted list box
+            sw.Start();//start timer
+
+            int low = 0;//index of list
+            int high = copy.Count - 1;//highest value of list
+            if (UI_Rprovided.Checked)//provided radio button is checked
+            {
+                quicksort(copy, low, high);//sort list
+
+                //display sorted list 
+                foreach (Employees emp in copy)
+                {
+                    UI_sortedlist.Items.Add(emp.display);
+                }
+            }
+            if (UI_Rfiledata.Checked)//file raidio button is checked
+            {
+                quicksort(copy, low, high);//sort list
+
+                //display sorted list
+                foreach (Employees emp in copy)
+                {
+                    UI_sortedlist.Items.Add(emp.display);
+                }
+            }
+            sw.Stop();//stop timer
+            long ElapsedTime = sw.ElapsedTicks;//store sw time
+            UI_elapsed_lbl.Text = ElapsedTime.ToString();//display time to textbox
+            sw.Reset();//reset timer after displayed
+        }
+        //********************************************************************************************
+        //Method: bubblesort
+        //Purpose: sort list
+        //Parameters: List<int> mylist
+        //Returns:sorted list
+        //*********************************************************************************************
+        private static void bubblesort(List<Employees> myList)
+        {
+            int n = myList.Count;//size of list
+
+            //go thourgh all posible passes
+            for (int p = 0; p < n - 1; p++)
+            {
+                //go through whole list and on the next iteration list size will decrease by n - 1
+                //leaving the largerest value to to last index position
+                for (int j = 0; j < (n - (p + 1)); j++)
+                {
+
+                    //compare current value to the next index position and if current position is greater, swap positions
+                    if (myList[j]._id > myList[j + 1]._id)
+                    {
+                        //swap values
+                        swap(myList, j, j + 1);
+                    }
+                }
+            }
+        }//********************************************************************************************
+        //Method: swap
+        //Purpose: swap smaller value and the larger value to its wants position
+        //Parameters: List<int> mylist, int x(initial index of smaller value), int y(initial index of larger value)
+        //Returns:
+        //*********************************************************************************************
+        static private void swap(List<Employees> myList, int x, int y) 
+        {
+            Employees temp = myList[x];//temp value to swap
+            myList[x] = myList[y];//swap x so x will be the larger value
+            myList[y] = temp;//temp(smaller value) will be y
+        }
+        //********************************************************************************************
+        //Method: quicksort
+        //Purpose: sort list
+        //Parameters: List<int> mylist
+        //Returns:sorted list
+        //*********************************************************************************************
+        private static void quicksort(List<Employees> myList, int low, int high) 
+        {
+            int pi;//pivot point
+
+            if(low < high)//check if all index values have been sorted
+            {
+                pi = parition(myList, low, high);//find pivot point
+                quicksort(myList, low, pi - 1);//sort lower half
+                quicksort(myList, pi + 1, high);//sort upper half
+            }
+        }
+        private static int parition(List<Employees> myList, int low, int high)
+        {
+            int pi = myList[high]._id;//last index value will be the pivot point
+            //position will be before the lisst because we need to compare j to the value behind it to sort
+            int i = low - 1;
+            //go through list
+            for(int j = low; j < high; j++)
+            {
+                //if currnet index value is less than the pivot point, swap j and i so all values smaller than pivot will be 
+                //placed behind the pivot point
+                if (myList[j]._id < pi)
+                {
+                    i++;//move i to next index
+                    swap(myList, i, j);//swap j and i
+                }
+            }
+            //when all values that are smaller thean the pivot point have been placed to the left side 
+            //swwap the next index value to the right side of the smaller values with the pivot point 
+            swap(myList, i+1, high);
+            return(i+1);//return pivot point
+
+        }
+        //********************************************************************************************
+        //Method: UI_Clearsorted_Click
+        //Purpose: clear sorted text box
+        //Returns:
+        //*********************************************************************************************
+        private void UI_Clearsorted_Click(object sender, EventArgs e)
+        {
+            UI_sortedlist.Items.Clear();//clear sorted list box
+        }
+        //********************************************************************************************
+        //Method: UI_Clearunsorted_Click
+        //Purpose: clear sorted text box
+        //Returns:
+        //*********************************************************************************************
+        private void UI_Clearunsorted_Click(object sender, EventArgs e)
+        {
+            UI_unsortedlist.Items.Clear();//clear unsorted list box
+        }
+        //********************************************************************************************
+        //Method: UI_displayunsort_click
+        //Purpose: redisplay unsorted list
+        //Returns:
+        //*********************************************************************************************
+        private void UI_displayunsort_Click(object sender, EventArgs e)
+        {
+
+            UI_unsortedlist.Items.Clear();//clear contents
+            datalist.Clear();
+            copy.Clear();
+            if (UI_Rprovided.Checked)//provided radio button checked
+            {
+                //go through array id and salary
+                for (int i = 0; i < employee_id.Length; i++)
+                {
+                    //add contents to datalist, copy and display contents in unsorted list box
+                    datalist.Add(new Employees(employee_id[i], salary[i]));
+                    copy.Add(new Employees(employee_id[i], salary[i]));
+                    UI_unsortedlist.Items.Add(datalist[i].display);
+                }
+            }
+            if (UI_Rfiledata.Checked)//files radio button checked
+            {
+                //redisplay unsorted list to list box
+                foreach(Employees emp in files)
+                {
+                    UI_unsortedlist.Items.Add(emp.display);
+                }
+            }
+        }
+    }
+}

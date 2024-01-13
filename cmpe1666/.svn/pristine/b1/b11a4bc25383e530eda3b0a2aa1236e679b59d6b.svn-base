@@ -1,0 +1,116 @@
+﻿namespace ica11
+{
+    partial class ModalDialogForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.UI_fontbtn = new System.Windows.Forms.Button();
+            this.UI_Colorbtn = new System.Windows.Forms.Button();
+            this.UI_fonttbx = new System.Windows.Forms.TextBox();
+            this.UI_colortbx = new System.Windows.Forms.TextBox();
+            this.UI_OkBtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // UI_fontbtn
+            // 
+            this.UI_fontbtn.Location = new System.Drawing.Point(38, 58);
+            this.UI_fontbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UI_fontbtn.Name = "UI_fontbtn";
+            this.UI_fontbtn.Size = new System.Drawing.Size(70, 19);
+            this.UI_fontbtn.TabIndex = 0;
+            this.UI_fontbtn.Text = "Select Font";
+            this.UI_fontbtn.UseVisualStyleBackColor = true;
+            this.UI_fontbtn.Click += new System.EventHandler(this.UI_fontbtn_Click);
+            // 
+            // UI_Colorbtn
+            // 
+            this.UI_Colorbtn.Location = new System.Drawing.Point(38, 107);
+            this.UI_Colorbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UI_Colorbtn.Name = "UI_Colorbtn";
+            this.UI_Colorbtn.Size = new System.Drawing.Size(70, 19);
+            this.UI_Colorbtn.TabIndex = 1;
+            this.UI_Colorbtn.Text = "Select color";
+            this.UI_Colorbtn.UseVisualStyleBackColor = true;
+            this.UI_Colorbtn.Click += new System.EventHandler(this.UI_Colorbtn_Click);
+            // 
+            // UI_fonttbx
+            // 
+            this.UI_fonttbx.Location = new System.Drawing.Point(140, 58);
+            this.UI_fonttbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UI_fonttbx.Name = "UI_fonttbx";
+            this.UI_fonttbx.Size = new System.Drawing.Size(194, 20);
+            this.UI_fonttbx.TabIndex = 2;
+            // 
+            // UI_colortbx
+            // 
+            this.UI_colortbx.Location = new System.Drawing.Point(140, 108);
+            this.UI_colortbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UI_colortbx.Name = "UI_colortbx";
+            this.UI_colortbx.Size = new System.Drawing.Size(194, 20);
+            this.UI_colortbx.TabIndex = 3;
+            // 
+            // UI_OkBtn
+            // 
+            this.UI_OkBtn.Location = new System.Drawing.Point(177, 138);
+            this.UI_OkBtn.Name = "UI_OkBtn";
+            this.UI_OkBtn.Size = new System.Drawing.Size(75, 23);
+            this.UI_OkBtn.TabIndex = 4;
+            this.UI_OkBtn.Text = "OK";
+            this.UI_OkBtn.UseVisualStyleBackColor = true;
+            this.UI_OkBtn.Click += new System.EventHandler(this.UI_OkBtn_Click);
+            // 
+            // ModalDialogForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(600, 173);
+            this.Controls.Add(this.UI_OkBtn);
+            this.Controls.Add(this.UI_colortbx);
+            this.Controls.Add(this.UI_fonttbx);
+            this.Controls.Add(this.UI_Colorbtn);
+            this.Controls.Add(this.UI_fontbtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "ModalDialogForm";
+            this.Text = "ModalDialogForm";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button UI_fontbtn;
+        private System.Windows.Forms.Button UI_Colorbtn;
+        private System.Windows.Forms.TextBox UI_fonttbx;
+        private System.Windows.Forms.TextBox UI_colortbx;
+        private System.Windows.Forms.Button UI_OkBtn;
+    }
+}

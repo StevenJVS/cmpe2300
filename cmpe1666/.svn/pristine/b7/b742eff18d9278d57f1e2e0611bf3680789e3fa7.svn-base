@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using GDIDrawer;
+
+namespace Lab4
+{
+    public partial class Form1 : Form
+    {
+        public struct LineSeg
+        {
+            public Point Start;
+            public Point End;
+            public byte thickness;
+            public float alpha;
+            public Color color;
+
+            public LineSeg (Point _start, Point _end, byte _thickness, float _alpha, Color _color)
+            {
+                Start = _start;
+                End = _end;
+                thickness= _thickness;
+                alpha= _alpha;
+                color= _color;
+            }
+        }
+       Stack<LinkedList<LineSeg>> stack= new Stack<LinkedList<LineSeg>>();
+        CDrawer canvas = new CDrawer(1024, 768, true);
+        bool draw = false;
+        Point pos;
+        int segcount = 0; 
+        int linecount = 0;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_timer_Tick(object sender, EventArgs e)
+        {
+            Point click;
+            Point current;
+            if(canvas.GetLastMouseLeftClick(out click) && click != pos && !draw)
+            {
+                draw = true;
+                pos = click;
+                stack.Push(new LinkedList<LineSeg>());
+            }
+            if(draw && canvas.GetLastMousePosition(out current) && current != pos)
+            {
+
+            }
+        }
+
+        private void UI_colorbtn_Click(object sender, EventArgs e)
+        {
+            UI_colordialog.ShowDialog();
+            UI_picturebox.BackColor = UI_colordialog.Color;
+        }
+    }
+}

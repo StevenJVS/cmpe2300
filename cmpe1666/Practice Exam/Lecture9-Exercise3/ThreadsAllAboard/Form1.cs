@@ -1,0 +1,281 @@
+﻿/* ThreadsAboard Demo
+ * Steven Dytiuk
+ * 2022-03-30
+ * 
+ * Start with airports on a GDI Drawer map
+ * Control Tower will commission 100 pilots
+ * to fly from randomly selected city to another randomly selected city
+ * Each pilot will:
+ *  *determine his flight path color randomly
+ *  *determine a random speed of 5-50ms (delay between generating pixels)
+ *  *update the tower when he has arrived at his destination, and every 100 pixels along the way
+ * Control tower will:
+ *  *update the GDIDrawer window with the received flight path information from each pilot
+ *  */
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Threading;
+using GDIDrawer;
+
+namespace Lecture9Exercise3
+{
+    public struct CityInfo
+    {
+        public string name;
+        public string code;
+        public int xC;
+        public int yC;
+
+        public CityInfo(string CityName, string AirportCode, int xCoord, int yCoord)
+        {
+            name = CityName;
+            code = AirportCode;
+            xC = xCoord;
+            yC = yCoord;
+        }
+    }
+
+    public struct FlightPairs
+    {
+        public CityInfo from;
+        public CityInfo to;
+
+        public FlightPairs(CityInfo fromCity, CityInfo toCity)
+        {
+            from = fromCity;
+            to = toCity;
+        }
+
+        public override string ToString()
+        {
+            return from.name + "(" + from.code + ") to " + to.name + "(" + to.code + ")";
+        }
+    }
+
+    public delegate void delFlightInfo(List<Point> p, Color c);
+
+    public partial class Form1 : Form
+    {
+        List<CityInfo> Cities = new List<CityInfo>();
+        CDrawer _canvas = new CDrawer();
+        List<FlightPairs> _flights = new List<FlightPairs>();
+
+        
+
+
+        public Form1()
+        {
+            InitializeComponent();
+            InitializeCities();
+            DrawCities();
+        }
+
+        private void InitializeCities()
+        {
+            //Edmonton
+            Cities.Add(new CityInfo("Edmonton", "YEG", 240, 40));
+
+            //Kelowna
+            Cities.Add(new CityInfo("Kelowna", "YLW", 180, 80));
+
+            //Comox
+            Cities.Add(new CityInfo("Comox", "YQQ", 80, 120));
+
+            //Victoria
+            Cities.Add(new CityInfo("Victoria", "YYJ", 100, 160));
+
+            //Abbotsford
+            Cities.Add(new CityInfo("Abbotsford", "YXX", 140, 140));
+
+            //Saskatoon
+            Cities.Add(new CityInfo("Saskatoon", "YXE", 320, 100));
+
+            //Regina
+            Cities.Add(new CityInfo("Regina", "YQR", 320, 140));
+
+            //Winnipeg
+            Cities.Add(new CityInfo("Winnipeg", "YWG", 400, 160));
+
+            //Ottawa
+            Cities.Add(new CityInfo("Ottawa", "YOW", 600, 160));
+
+            //Toronto
+            Cities.Add(new CityInfo("Toronto", "YYZ", 580, 180));
+
+            //Hamilton
+            Cities.Add(new CityInfo("Hamilton", "YHM", 560, 200));
+
+            //London
+            Cities.Add(new CityInfo("London", "YXU", 540, 220));
+
+            //Charlottetown
+            Cities.Add(new CityInfo("Charlottetown", "YYG", 760, 80));
+
+            //Halifax
+            Cities.Add(new CityInfo("Halifax", "YHZ", 780, 100));
+
+            //Nashville
+            Cities.Add(new CityInfo("Nashville", "BNA", 520, 340));
+
+            //Cancun
+            Cities.Add(new CityInfo("Cancun", "CUN", 560, 560));
+
+            //Puerto Vallarta
+            Cities.Add(new CityInfo("Puerto Vallarta", "PVR", 280, 580));
+
+            //Mazatlan
+            Cities.Add(new CityInfo("Mazatlan", "MZT", 260, 540));
+
+            //Phoenix Mesa
+            Cities.Add(new CityInfo("Phoenix-Mesa", "AZA", 240, 440));
+
+            //Los Cabos
+            Cities.Add(new CityInfo("Los Cabos", "SJD", 220, 560));
+
+            //San Diego
+            Cities.Add(new CityInfo("San Diego", "SAN", 100, 440));
+
+            //Burbank
+            Cities.Add(new CityInfo("Burbank", "BUR", 80, 380));
+
+            //Palm Springs
+            Cities.Add(new CityInfo("Palm Springs", "PSP", 120, 380));
+
+            //Las Vegas
+            Cities.Add(new CityInfo("Las Vegas", "LAS", 200, 340));
+
+            //San Francisco
+            Cities.Add(new CityInfo("San Francisco", "SFO", 40, 340));
+
+
+        }
+
+        private void DrawCities()
+        {
+            foreach (CityInfo c in Cities)
+            {
+                _canvas.AddCenteredRectangle(c.xC, c.yC, 5, 5, Color.Blue);
+                _canvas.AddText(c.code, 10, c.xC - 25, c.yC - 10, 50, 50, Color.Yellow);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCommission_Click(object sender, EventArgs e)
+        {
+            //create a thread to fly a flight from random city to random city
+            //from and to shouldn't be the same
+            //select random to and from cities
+            Random rand = new Random();
+            for (int i=0; i<20;i++)
+            {
+                CityInfo from = Cities[rand.Next(Cities.Count)];
+                CityInfo to;
+
+                //pick a to city that is different from the from city
+                do
+                {
+                    to = Cities[rand.Next(Cities.Count)];
+                } while (to.code == from.code);
+                _flights.Add(new FlightPairs(from, to));
+
+                Thread newFlight = new Thread(() => { FlyThePlane(from, to); });
+                newFlight.Start();
+                newFlight.IsBackground = true;
+            }
+            lbFlights.DataSource = null;
+            lbFlights.DataSource = _flights;
+            
+
+        }
+
+        private void ReceiveFlightInfo(List<Point> flightPoints, Color flightColor)
+        {
+            foreach (Point p in flightPoints)
+            {
+                _canvas.AddCenteredRectangle(p, 2, 2, flightColor);
+            }
+        }
+
+        private void FlyThePlane(CityInfo from, CityInfo to)
+        {
+            //assess where the from city is and where the to city is,
+            //and determine a flight path pixel by pixel
+
+            //random helper
+            Random rand = new Random();
+
+            //pick a color
+            Color flightColor = Color.FromArgb(rand.Next());
+
+            //pick a flight speed
+            int delay = rand.Next(5, 50);
+
+            //Keep track of the pixels in a list
+            //we will send this list to the control tower
+            List<Point> flightPath = new List<Point>();
+            
+            Point current = new Point(from.xC, from.yC);
+            
+            //loop until we get to our destination
+
+            while (current.X != to.xC || current.Y != to.yC)
+            {
+                Thread.Sleep(delay);
+                Point nextPoint = new Point();
+                //where is our next dot going to be?
+                if (to.xC - current.X > 0) nextPoint.X = current.X + 1;
+                else if (to.xC - current.X < 0) nextPoint.X = current.X - 1;
+                else nextPoint.X = current.X;
+
+                //now for Y...
+                if (to.yC - current.Y > 0) nextPoint.Y = current.Y + 1;
+                else if (to.yC - current.Y < 0) nextPoint.Y = current.Y - 1;
+                else nextPoint.Y = current.Y;
+
+                //add this new point to our list
+                flightPath.Add(nextPoint);
+                current = nextPoint;
+
+                if (flightPath.Count == 100)
+                {
+                    //send info to tower
+                    //TODO
+                    try
+                    {
+                        Invoke(new delFlightInfo(ReceiveFlightInfo), flightPath, flightColor);
+                    }
+                    catch
+                    {
+                        System.Diagnostics.Trace.WriteLine("Error received.");
+                    }
+                    //clear the list
+                    flightPath.Clear();
+                }
+            }
+
+            //send info to tower because the flight is over
+            //TODO
+            try
+            {
+                Invoke(new delFlightInfo(ReceiveFlightInfo), flightPath, flightColor);
+            }
+            catch
+            {
+                System.Diagnostics.Trace.WriteLine("Error received.");
+            }
+
+        }
+    }
+}

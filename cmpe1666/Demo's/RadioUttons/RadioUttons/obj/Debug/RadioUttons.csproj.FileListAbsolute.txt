@@ -1,0 +1,11 @@
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\bin\Debug\RadioUttons.exe.config
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\bin\Debug\RadioUttons.exe
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\bin\Debug\RadioUttons.pdb
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.csproj.AssemblyReference.cache
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.csproj.SuggestedBindingRedirects.cache
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.Form1.resources
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.Properties.Resources.resources
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.csproj.GenerateResource.cache
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.csproj.CoreCompileInputs.cache
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.exe
+C:\Users\ssantiago1\Documents\Repos\RadioUttons\RadioUttons\obj\Debug\RadioUttons.pdb

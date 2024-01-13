@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica5
+{
+    public partial class Form1 : Form
+    {
+        int count = 0;
+        string palindrome;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_radioTest_Click(object sender, EventArgs e)
+        {
+            if (UI_radioTest.Checked)
+            {
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                UI_PalindromeCountfromFile.Visible = false;UI_PalindromeCountfromFile.Enabled = false;
+                UI_Execution.Visible = false;UI_Execution.Enabled = false;
+                UI_ListofPlalindromeFromFile.Visible = false;UI_ListofPlalindromeFromFile.Enabled = false;
+
+
+                label1.Visible = true;
+                label2.Visible = true;
+                UI_testValue.Visible = true;UI_testValue.Enabled = true;
+                UI_ValueResult.Visible = true;UI_ValueResult.Enabled = true;
+
+            }
+            if (UI_radioFile.Checked)
+            {
+                label1.Visible = false;
+                label2.Visible = false;
+                UI_testValue.Visible = false;UI_testValue.Enabled= false;
+                UI_ValueResult.Visible = false;UI_ValueResult.Enabled = false;
+
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                UI_PalindromeCountfromFile.Visible = true;UI_PalindromeCountfromFile.Enabled=true;
+                UI_Execution.Visible = true;UI_Execution.Enabled = true;
+                UI_ListofPlalindromeFromFile.Visible = true;
+            }
+                
+        }
+        private void IsPalindrome(string input, int num)
+        {
+            string reverse = (string)input.Reverse()
+
+            Console.WriteLine(reverse);
+
+
+            
+        }
+        private void CheckPaliFromFile(string palindrome)
+        {
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string input;
+            if (UI_radioTest.Checked)
+            {
+                input = UI_testValue.Text;
+                IsPalindrome(input,0);
+            } 
+            if (UI_radioFile.Checked)
+            {
+
+            }
+        }
+    }
+}

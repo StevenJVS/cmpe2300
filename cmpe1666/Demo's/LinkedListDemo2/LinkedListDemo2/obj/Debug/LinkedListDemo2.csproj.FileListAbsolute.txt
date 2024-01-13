@@ -1,0 +1,8 @@
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\bin\Debug\LinkedListDemo2.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\bin\Debug\LinkedListDemo2.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\bin\Debug\LinkedListDemo2.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\obj\Debug\LinkedListDemo2.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\obj\Debug\LinkedListDemo2.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\obj\Debug\LinkedListDemo2.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\obj\Debug\LinkedListDemo2.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Demo's\LinkedListDemo2\LinkedListDemo2\obj\Debug\LinkedListDemo2.pdb

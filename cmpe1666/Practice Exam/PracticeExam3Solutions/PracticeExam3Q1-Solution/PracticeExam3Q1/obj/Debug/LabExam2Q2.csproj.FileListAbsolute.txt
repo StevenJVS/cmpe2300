@@ -1,0 +1,11 @@
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\bin\Debug\LabExam1Q2.exe.config
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\bin\Debug\LabExam1Q2.exe
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\bin\Debug\LabExam1Q2.pdb
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam2Q2.csproj.AssemblyReference.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam2Q2.Form1.resources
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam2Q2.ModelessDialog.resources
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam1Q2.Properties.Resources.resources
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam2Q2.csproj.GenerateResource.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam2Q2.csproj.CoreCompileInputs.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam1Q2.exe
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam2-Winter2022\LE2Q2-Solution\LabExam2Q2\obj\Debug\LabExam1Q2.pdb

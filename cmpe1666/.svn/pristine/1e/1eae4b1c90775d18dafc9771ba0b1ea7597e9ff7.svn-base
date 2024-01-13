@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Threading;
+using System.IO;
+using System.Collections;
+
+namespace ica14
+{
+    public delegate bool delstring(string s);//create string delegate
+    public delegate void delvoid(bool c);//create bool delegate
+    public delegate void deldelvoid();
+    public partial class Form1 : Form
+    {
+        //instance of the delegate
+        public delstring _delstring = null;
+        public delvoid _delvoid = null;
+        public deldelvoid _deldelvoid = null;
+
+        //stop watch
+        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+
+        StreamReader sr;//stream reader
+        List<string> list;//list
+        List<string> copylist;//modified list
+      
+        public Form1()
+        {
+            InitializeComponent();
+            //set delegates
+            _delstring = new delstring(IsPalindrome);
+            _delvoid = new delvoid(Check);
+            _deldelvoid = new deldelvoid(Thread);
+            sw.Stop();
+        }
+        private void UI_loadfile_Click(object sender, EventArgs e)
+        {
+
+            UI_openfiledialog = new OpenFileDialog();//new dialog
+            if(UI_openfiledialog.ShowDialog() == DialogResult.OK)//check for resullts
+            {
+                sr = new StreamReader(UI_openfiledialog.FileName);//new stream reader
+                list = new List<string>(File.ReadAllLines(UI_openfiledialog.FileName));//add lines
+                Ui_list.Text = $"Loaded {list.Count} words!";//display counted lines
+            }
+        }
+        private void UI_Find_Click(object sender, EventArgs e)
+        {
+            Ui_list.Text = null;//clear list box
+            sw.Start();//start timer
+            _deldelvoid.Invoke();
+            Thread th = new Thread(Thread);//create new thread
+            th.IsBackground = true;//background thread
+            th.Start();//start timer
+
+            for(int i = 0; i < copylist.Count; i++)//go through list
+            {
+                Ui_list.Text += $"{copylist[i]}, ";//add display contents to list box
+            }
+            sw.Stop();//stop timer
+            //diplay number strings and time
+            Ui_list.Text += $"there are {copylist.Count} palindromes with a time of {sw.ElapsedMilliseconds}ms";
+        }
+        //********************************************************************************************
+        //Method: Thread
+        //Purpose: add palindromes to list
+        //Parameters: 
+        //Returns: 
+        //*********************************************************************************************
+        private void Thread()
+        {
+            copylist = new List<string>();//new list
+            for (int i = 0; i < list.Count; i++)//go through original list
+            {
+                bool check = _delstring.Invoke(list[i]);//check if contents strings are palindromes
+                if (check)//if true
+                {
+                    copylist.Add(list[i]);//add to palindrome list
+                }               
+            }
+        }
+        private void Ui_test_Click(object sender, EventArgs e)
+        {
+            _delvoid.Invoke(_delstring.Invoke(UI_textbox.Text));//check if string is a palindrome
+        }
+        //********************************************************************************************
+        //Method: IsPalindrome
+        //Purpose: Checks if the selected string is a palindrome
+        //Parameters: string text
+        //Returns: true if string is a palindrome
+        //*********************************************************************************************
+        private bool IsPalindrome(string text)
+        {
+            if (text.Length <= 1)//check if there are letters in string
+                return true;//if it check all letters, return true
+            else
+            {
+                if (text[0] != text[text.Length - 1])//if current index +n and last index -n does not equal, return false
+                    return false;
+                else
+                    return IsPalindrome(text.Substring(1, text.Length - 2));//run method again if equal
+            }
+        }
+        //********************************************************************************************
+        //Method: Check
+        //Purpose: Display message if palindrome is true
+        //Returns:
+        //*********************************************************************************************
+        private void Check(bool check)
+        {
+            //print True if palindrome is detected
+            if (check == true)
+                UI_textbox.Text = $"{UI_textbox.Text} is a palindrome";
+            //print false if palindrome is not detected
+            else
+                UI_textbox.Text = $"{UI_textbox.Text} is not a palindrome";
+        }
+
+    }
+}

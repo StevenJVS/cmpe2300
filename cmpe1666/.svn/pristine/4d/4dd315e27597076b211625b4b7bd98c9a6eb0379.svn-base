@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica12
+{
+
+    public partial class Form1 : Form
+    {
+        public delegate string inputstring(string s);
+        public inputstring _stringinput = null;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+        private void UI_radio_Click(object sender, EventArgs e)
+        {
+
+            if (UI_upper.Checked)
+            {
+                _stringinput = new inputstring(Upper);              
+            }
+            if (UI_lower.Checked)
+            {
+                _stringinput = new inputstring(Lower);
+            }
+            if (UI_flip.Checked)
+            {
+                _stringinput = new inputstring(Flip);
+            }         
+
+            UI_output.Text = _stringinput.Invoke(UI_input.Text);
+
+        }
+        private string Lower(string init)
+        {
+            string input = init.ToLower();
+            return input;
+        }
+        private string Upper(string init)
+        {
+            string input = init.ToUpper();
+            return input;
+        }
+        private string Flip(string init)
+        {
+            string input  = "";
+
+            foreach(char c in init)
+            {
+                if (char.IsUpper(c))
+                {
+                    input += char.ToLower(c);
+                }
+                else
+                {
+                    input += char.ToUpper(c);
+                }
+            }
+            return input;
+        }
+    }
+}

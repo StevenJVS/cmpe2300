@@ -1,0 +1,193 @@
+﻿namespace Lab4
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.UI_textbox = new System.Windows.Forms.TextBox();
+            this.UI_undoline = new System.Windows.Forms.Button();
+            this.UI_undoseg = new System.Windows.Forms.Button();
+            this.UI_reducecomplexity = new System.Windows.Forms.Button();
+            this.UI_colorbtn = new System.Windows.Forms.Button();
+            this.UI_colordialog = new System.Windows.Forms.ColorDialog();
+            this.UI_thicknessrbtn = new System.Windows.Forms.RadioButton();
+            this.UI_alpharbtn = new System.Windows.Forms.RadioButton();
+            this.UI_picturebox = new System.Windows.Forms.PictureBox();
+            this.UI_trackbar = new System.Windows.Forms.TrackBar();
+            this.UI_timer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.UI_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UI_trackbar)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // UI_textbox
+            // 
+            this.UI_textbox.Location = new System.Drawing.Point(15, 12);
+            this.UI_textbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_textbox.Name = "UI_textbox";
+            this.UI_textbox.ReadOnly = true;
+            this.UI_textbox.Size = new System.Drawing.Size(436, 22);
+            this.UI_textbox.TabIndex = 0;
+            // 
+            // UI_undoline
+            // 
+            this.UI_undoline.Location = new System.Drawing.Point(13, 39);
+            this.UI_undoline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_undoline.Name = "UI_undoline";
+            this.UI_undoline.Size = new System.Drawing.Size(439, 23);
+            this.UI_undoline.TabIndex = 1;
+            this.UI_undoline.Text = "Undo Line...";
+            this.UI_undoline.UseVisualStyleBackColor = true;
+            this.UI_undoline.Click += new System.EventHandler(this.UI_undoline_Click);
+            // 
+            // UI_undoseg
+            // 
+            this.UI_undoseg.Location = new System.Drawing.Point(13, 69);
+            this.UI_undoseg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_undoseg.Name = "UI_undoseg";
+            this.UI_undoseg.Size = new System.Drawing.Size(439, 23);
+            this.UI_undoseg.TabIndex = 2;
+            this.UI_undoseg.Text = "Undo Segment...";
+            this.UI_undoseg.UseVisualStyleBackColor = true;
+            this.UI_undoseg.Click += new System.EventHandler(this.UI_undoseg_Click);
+            // 
+            // UI_reducecomplexity
+            // 
+            this.UI_reducecomplexity.Location = new System.Drawing.Point(12, 98);
+            this.UI_reducecomplexity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_reducecomplexity.Name = "UI_reducecomplexity";
+            this.UI_reducecomplexity.Size = new System.Drawing.Size(439, 23);
+            this.UI_reducecomplexity.TabIndex = 3;
+            this.UI_reducecomplexity.Text = "Reduce Complexity...";
+            this.UI_reducecomplexity.UseVisualStyleBackColor = true;
+            this.UI_reducecomplexity.Click += new System.EventHandler(this.UI_reducecomplexity_Click);
+            // 
+            // UI_colorbtn
+            // 
+            this.UI_colorbtn.Location = new System.Drawing.Point(13, 127);
+            this.UI_colorbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_colorbtn.Name = "UI_colorbtn";
+            this.UI_colorbtn.Size = new System.Drawing.Size(439, 23);
+            this.UI_colorbtn.TabIndex = 4;
+            this.UI_colorbtn.Text = "Color";
+            this.UI_colorbtn.UseVisualStyleBackColor = true;
+            this.UI_colorbtn.Click += new System.EventHandler(this.UI_colorbtn_Click);
+            // 
+            // UI_thicknessrbtn
+            // 
+            this.UI_thicknessrbtn.AutoSize = true;
+            this.UI_thicknessrbtn.Checked = true;
+            this.UI_thicknessrbtn.Location = new System.Drawing.Point(15, 262);
+            this.UI_thicknessrbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_thicknessrbtn.Name = "UI_thicknessrbtn";
+            this.UI_thicknessrbtn.Size = new System.Drawing.Size(90, 20);
+            this.UI_thicknessrbtn.TabIndex = 7;
+            this.UI_thicknessrbtn.TabStop = true;
+            this.UI_thicknessrbtn.Text = "Thickness";
+            this.UI_thicknessrbtn.UseVisualStyleBackColor = true;
+            // 
+            // UI_alpharbtn
+            // 
+            this.UI_alpharbtn.AutoSize = true;
+            this.UI_alpharbtn.Location = new System.Drawing.Point(361, 262);
+            this.UI_alpharbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_alpharbtn.Name = "UI_alpharbtn";
+            this.UI_alpharbtn.Size = new System.Drawing.Size(63, 20);
+            this.UI_alpharbtn.TabIndex = 8;
+            this.UI_alpharbtn.Text = "Alpha";
+            this.UI_alpharbtn.UseVisualStyleBackColor = true;
+            // 
+            // UI_picturebox
+            // 
+            this.UI_picturebox.BackColor = System.Drawing.Color.Red;
+            this.UI_picturebox.Location = new System.Drawing.Point(177, 249);
+            this.UI_picturebox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UI_picturebox.Name = "UI_picturebox";
+            this.UI_picturebox.Size = new System.Drawing.Size(131, 69);
+            this.UI_picturebox.TabIndex = 9;
+            this.UI_picturebox.TabStop = false;
+            // 
+            // UI_trackbar
+            // 
+            this.UI_trackbar.Location = new System.Drawing.Point(12, 169);
+            this.UI_trackbar.Margin = new System.Windows.Forms.Padding(4);
+            this.UI_trackbar.Maximum = 100;
+            this.UI_trackbar.Minimum = 1;
+            this.UI_trackbar.Name = "UI_trackbar";
+            this.UI_trackbar.Size = new System.Drawing.Size(440, 56);
+            this.UI_trackbar.TabIndex = 10;
+            this.UI_trackbar.TickFrequency = 10;
+            this.UI_trackbar.Value = 1;
+            this.UI_trackbar.Scroll += new System.EventHandler(this.UI_trackbar_Scroll);
+            // 
+            // UI_timer
+            // 
+            this.UI_timer.Enabled = true;
+            this.UI_timer.Interval = 10;
+            this.UI_timer.Tick += new System.EventHandler(this.UI_timer_Tick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(464, 329);
+            this.Controls.Add(this.UI_trackbar);
+            this.Controls.Add(this.UI_picturebox);
+            this.Controls.Add(this.UI_alpharbtn);
+            this.Controls.Add(this.UI_thicknessrbtn);
+            this.Controls.Add(this.UI_colorbtn);
+            this.Controls.Add(this.UI_reducecomplexity);
+            this.Controls.Add(this.UI_undoseg);
+            this.Controls.Add(this.UI_undoline);
+            this.Controls.Add(this.UI_textbox);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.UI_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UI_trackbar)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox UI_textbox;
+        private System.Windows.Forms.Button UI_undoline;
+        private System.Windows.Forms.Button UI_undoseg;
+        private System.Windows.Forms.Button UI_reducecomplexity;
+        private System.Windows.Forms.Button UI_colorbtn;
+        private System.Windows.Forms.ColorDialog UI_colordialog;
+        private System.Windows.Forms.RadioButton UI_thicknessrbtn;
+        private System.Windows.Forms.RadioButton UI_alpharbtn;
+        private System.Windows.Forms.PictureBox UI_picturebox;
+        private System.Windows.Forms.TrackBar UI_trackbar;
+        private System.Windows.Forms.Timer UI_timer;
+    }
+}
+

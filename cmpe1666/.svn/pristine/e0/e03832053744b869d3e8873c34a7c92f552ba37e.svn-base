@@ -1,0 +1,142 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+
+namespace ica5
+{
+    public partial class Form1 : Form
+    {
+        bool check;//result if palindrome present
+        int count = 0;//counter to count palindromes
+        StreamReader swOutputFile;//stream reader
+        int timer;//timer for execution
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_radioTest_Click(object sender, EventArgs e)
+        {
+            
+            if (UI_radioTest.Checked)
+            {
+                //hide contents under the button
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                UI_PalindromeCountfromFile.Visible = false;UI_PalindromeCountfromFile.Enabled = false;
+                UI_Execution.Visible = false;UI_Execution.Enabled = false;
+                UI_ListofPlalindromeFromFile.Visible = false;UI_ListofPlalindromeFromFile.Enabled = false;
+
+                //show contents above the button
+                label1.Visible = true;
+                label2.Visible = true;
+                UI_testValue.Visible = true;UI_testValue.Enabled = true;
+                UI_ValueResult.Visible = true;UI_ValueResult.Enabled = true;
+
+            }
+            if (UI_radioFile.Checked)
+            {
+                //hide contents above button
+                label1.Visible = false;
+                label2.Visible = false;
+                UI_testValue.Visible = false;UI_testValue.Enabled= false;
+                UI_ValueResult.Visible = false;UI_ValueResult.Enabled = false;
+
+                //show contents above the button
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                UI_PalindromeCountfromFile.Visible = true;UI_PalindromeCountfromFile.Enabled=true;
+                UI_Execution.Visible = true;UI_Execution.Enabled = true;
+                UI_ListofPlalindromeFromFile.Visible = true;
+            }
+                
+        }
+        private bool IsPalindrome(string text)
+        {
+            if (text.Length <= 1)//check if there are letters in string
+                return true;//if it check all letters, return true
+            else
+            {
+                if (text[0] != text[text.Length - 1])//if current index +n and last index -n does not equal, return false
+                    return false;
+                else
+                    return IsPalindrome(text.Substring(1, text.Length - 2));//run method again if equal
+            }
+        }
+        private void CheckPaliFromFile(StreamReader reader)
+        {
+            string sInput;//string to store current string
+            
+            while ((sInput = reader.ReadLine()) != null)//check if line isn't empty
+            {
+                check = IsPalindrome(sInput);//run each string in the palindrome method
+                if (check == true)
+                {
+                    count++;//count palindromes in file
+                    UI_ListofPlalindromeFromFile.Items.Add(sInput);//add palindromes in list box
+                }
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            string input;
+            if (UI_radioTest.Checked)
+            {
+                UI_testValue.Text = "";
+                UI_ValueResult.Text = "";
+
+                input = UI_testValue.Text;
+                check = IsPalindrome(input);
+                Check(check);
+
+            } 
+            if (UI_radioFile.Checked)
+            {
+                UI_ListofPlalindromeFromFile.Items.Clear();
+                UI_PalindromeCountfromFile.Text = "";
+                UI_Execution.Text = "";
+
+
+                timer = 0;
+                timer1.Enabled = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    swOutputFile = new StreamReader(openFileDialog1.FileName);
+                    CheckPaliFromFile(swOutputFile);
+                }
+                UI_PalindromeCountfromFile.Text = count.ToString();
+                UI_Execution.Text = timer.ToString();
+
+                
+            }
+        }
+        private void Check(bool check)
+        {
+            if (check == true)
+                UI_ValueResult.Text = "True";
+            else
+                UI_ValueResult.Text = "False";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer++;
+        }
+    }
+}

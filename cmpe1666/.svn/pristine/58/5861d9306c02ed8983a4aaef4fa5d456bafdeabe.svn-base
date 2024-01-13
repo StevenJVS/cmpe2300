@@ -1,0 +1,88 @@
+﻿namespace lab3
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.UI_Showscore = new System.Windows.Forms.CheckBox();
+            this.UI_AnimationSpeed = new System.Windows.Forms.CheckBox();
+            this.UI_PlayBtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // UI_Showscore
+            // 
+            this.UI_Showscore.AutoSize = true;
+            this.UI_Showscore.Location = new System.Drawing.Point(28, 29);
+            this.UI_Showscore.Name = "UI_Showscore";
+            this.UI_Showscore.Size = new System.Drawing.Size(101, 20);
+            this.UI_Showscore.TabIndex = 0;
+            this.UI_Showscore.Text = "Show Score";
+            this.UI_Showscore.UseVisualStyleBackColor = true;
+            this.UI_Showscore.CheckedChanged += new System.EventHandler(this.UI_Showscore_CheckedChanged);
+            // 
+            // UI_AnimationSpeed
+            // 
+            this.UI_AnimationSpeed.AutoSize = true;
+            this.UI_AnimationSpeed.Location = new System.Drawing.Point(28, 75);
+            this.UI_AnimationSpeed.Name = "UI_AnimationSpeed";
+            this.UI_AnimationSpeed.Size = new System.Drawing.Size(166, 20);
+            this.UI_AnimationSpeed.TabIndex = 1;
+            this.UI_AnimationSpeed.Text = "Show Animation speed";
+            this.UI_AnimationSpeed.UseVisualStyleBackColor = true;
+            // 
+            // UI_PlayBtn
+            // 
+            this.UI_PlayBtn.Location = new System.Drawing.Point(144, 119);
+            this.UI_PlayBtn.Name = "UI_PlayBtn";
+            this.UI_PlayBtn.Size = new System.Drawing.Size(75, 23);
+            this.UI_PlayBtn.TabIndex = 2;
+            this.UI_PlayBtn.Text = "Play";
+            this.UI_PlayBtn.UseVisualStyleBackColor = true;
+            this.UI_PlayBtn.Click += new System.EventHandler(this.UI_PlayBtn_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(371, 163);
+            this.Controls.Add(this.UI_PlayBtn);
+            this.Controls.Add(this.UI_AnimationSpeed);
+            this.Controls.Add(this.UI_Showscore);
+            this.Name = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.CheckBox UI_Showscore;
+        private System.Windows.Forms.CheckBox UI_AnimationSpeed;
+        private System.Windows.Forms.Button UI_PlayBtn;
+    }
+}
+

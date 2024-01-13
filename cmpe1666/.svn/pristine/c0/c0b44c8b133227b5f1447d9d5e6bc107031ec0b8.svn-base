@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica18
+{
+    public partial class Form1 : Form
+    {
+        public struct CustomerAmount
+        {
+            public int CustomerId;
+            public decimal AmountDue;
+
+            public CustomerAmount(int _id, decimal due)
+            {
+                CustomerId = _id;
+                AmountDue = due;
+            }
+            public override string ToString()
+            {
+                return $"{CustomerId:d3}:   {AmountDue:c}";
+            }
+
+        }
+        LinkedList<CustomerAmount> customerlist = new LinkedList<CustomerAmount>();
+        Random random = new Random();
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_addcustomerbtn_Click(object sender, EventArgs e)
+        {
+            customerlist.AddFirst(new CustomerAmount((int)UI_customerid.Value, (decimal)random.NextDouble()*10000));
+            Ui_list1.Items.Clear();
+            foreach(var item in customerlist)
+            {
+                Ui_list1.Items.Add(item.ToString());
+            }
+        }
+
+        private void Ui_displaysum_Click(object sender, EventArgs e)
+        {
+            double total = 0;
+            LinkedListNode<CustomerAmount> node = customerlist.First;  
+
+            while(node != null)
+            {
+                CustomerAmount val = node.Value;
+                total += (double)val.AmountDue;
+                node = node.Next;
+            }
+
+            UI_showtotal.Text = $"{total:c}";
+        }
+    }
+}

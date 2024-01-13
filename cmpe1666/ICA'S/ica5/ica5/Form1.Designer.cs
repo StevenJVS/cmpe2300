@@ -1,0 +1,266 @@
+﻿namespace ica5
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.UI_testValue = new System.Windows.Forms.TextBox();
+            this.UI_ValueResult = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.UI_radioTest = new System.Windows.Forms.RadioButton();
+            this.UI_radioFile = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UI_PalindromeCountfromFile = new System.Windows.Forms.TextBox();
+            this.UI_Execution = new System.Windows.Forms.TextBox();
+            this.UI_ListofPlalindromeFromFile = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // UI_testValue
+            // 
+            this.UI_testValue.AccessibleName = "TopGroup";
+            this.UI_testValue.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.UI_testValue.Location = new System.Drawing.Point(241, 76);
+            this.UI_testValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_testValue.Name = "UI_testValue";
+            this.UI_testValue.Size = new System.Drawing.Size(328, 22);
+            this.UI_testValue.TabIndex = 0;
+            // 
+            // UI_ValueResult
+            // 
+            this.UI_ValueResult.AccessibleName = "TopGroup";
+            this.UI_ValueResult.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.UI_ValueResult.Location = new System.Drawing.Point(241, 121);
+            this.UI_ValueResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_ValueResult.Name = "UI_ValueResult";
+            this.UI_ValueResult.ReadOnly = true;
+            this.UI_ValueResult.Size = new System.Drawing.Size(328, 22);
+            this.UI_ValueResult.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(241, 199);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(259, 73);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Find Palindromes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // UI_radioTest
+            // 
+            this.UI_radioTest.AutoSize = true;
+            this.UI_radioTest.Checked = true;
+            this.UI_radioTest.Location = new System.Drawing.Point(36, 37);
+            this.UI_radioTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_radioTest.Name = "UI_radioTest";
+            this.UI_radioTest.Size = new System.Drawing.Size(93, 20);
+            this.UI_radioTest.TabIndex = 3;
+            this.UI_radioTest.TabStop = true;
+            this.UI_radioTest.Text = "Test Value";
+            this.UI_radioTest.UseVisualStyleBackColor = true;
+            this.UI_radioTest.CheckedChanged += new System.EventHandler(this.UI_radioTest_Click);
+            this.UI_radioTest.Click += new System.EventHandler(this.UI_radioTest_Click);
+            // 
+            // UI_radioFile
+            // 
+            this.UI_radioFile.AutoSize = true;
+            this.UI_radioFile.Location = new System.Drawing.Point(36, 65);
+            this.UI_radioFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_radioFile.Name = "UI_radioFile";
+            this.UI_radioFile.Size = new System.Drawing.Size(50, 20);
+            this.UI_radioFile.TabIndex = 4;
+            this.UI_radioFile.TabStop = true;
+            this.UI_radioFile.Text = "File";
+            this.UI_radioFile.UseVisualStyleBackColor = true;
+            this.UI_radioFile.CheckedChanged += new System.EventHandler(this.UI_radioTest_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.UI_radioTest);
+            this.groupBox1.Controls.Add(this.UI_radioFile);
+            this.groupBox1.Location = new System.Drawing.Point(743, 76);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(267, 123);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Check Palindrome From";
+            // 
+            // UI_PalindromeCountfromFile
+            // 
+            this.UI_PalindromeCountfromFile.Location = new System.Drawing.Point(196, 347);
+            this.UI_PalindromeCountfromFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_PalindromeCountfromFile.Name = "UI_PalindromeCountfromFile";
+            this.UI_PalindromeCountfromFile.ReadOnly = true;
+            this.UI_PalindromeCountfromFile.Size = new System.Drawing.Size(328, 22);
+            this.UI_PalindromeCountfromFile.TabIndex = 6;
+            this.UI_PalindromeCountfromFile.Visible = false;
+            // 
+            // UI_Execution
+            // 
+            this.UI_Execution.Location = new System.Drawing.Point(196, 390);
+            this.UI_Execution.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_Execution.Name = "UI_Execution";
+            this.UI_Execution.ReadOnly = true;
+            this.UI_Execution.Size = new System.Drawing.Size(328, 22);
+            this.UI_Execution.TabIndex = 7;
+            this.UI_Execution.Visible = false;
+            // 
+            // UI_ListofPlalindromeFromFile
+            // 
+            this.UI_ListofPlalindromeFromFile.FormattingEnabled = true;
+            this.UI_ListofPlalindromeFromFile.ItemHeight = 16;
+            this.UI_ListofPlalindromeFromFile.Location = new System.Drawing.Point(621, 276);
+            this.UI_ListofPlalindromeFromFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_ListofPlalindromeFromFile.Name = "UI_ListofPlalindromeFromFile";
+            this.UI_ListofPlalindromeFromFile.Size = new System.Drawing.Size(387, 228);
+            this.UI_ListofPlalindromeFromFile.TabIndex = 8;
+            this.UI_ListofPlalindromeFromFile.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AccessibleName = "TopGroup";
+            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(152, 80);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Test Value:";
+            // 
+            // label2
+            // 
+            this.label2.AccessibleName = "TopGroup";
+            this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(112, 124);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Test Value Result:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(693, 256);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 16);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "List of Palindromes From File";
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 351);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(170, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Palindrome Count from File:";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(48, 394);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Execution Time (ms):";
+            this.label5.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.UI_ListofPlalindromeFromFile);
+            this.Controls.Add(this.UI_Execution);
+            this.Controls.Add(this.UI_PalindromeCountfromFile);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.UI_ValueResult);
+            this.Controls.Add(this.UI_testValue);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox UI_testValue;
+        private System.Windows.Forms.TextBox UI_ValueResult;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton UI_radioTest;
+        private System.Windows.Forms.RadioButton UI_radioFile;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox UI_PalindromeCountfromFile;
+        private System.Windows.Forms.TextBox UI_Execution;
+        private System.Windows.Forms.ListBox UI_ListofPlalindromeFromFile;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Timer timer1;
+    }
+}
+

@@ -1,0 +1,11 @@
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\bin\Debug\ica5.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\bin\Debug\ica5.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\bin\Debug\ica5.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.Form1.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\ICA'S\ica5\ica5\obj\Debug\ica5.pdb

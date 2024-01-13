@@ -1,0 +1,81 @@
+﻿/**CMPE 1666 - Intermediate Programming  *********
+ * 
+ * 
+ * Lab Exam 3- Winter 2022- Question 2***************
+ * 
+ * Name:
+ * 
+ */
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+
+namespace LE3Q2
+{
+    public partial class Form1 : Form
+    {  
+        //Define the Student struct here. 
+        private struct Student
+        {
+
+
+
+
+
+
+        }
+
+          //Declare your List of Students here
+
+        
+        
+        public Form1()
+        {
+            InitializeComponent();
+
+            //Create your empty list of Student structs here
+
+        }
+
+
+
+
+        private void UI_LoadStudents_Btn_Click(object sender, EventArgs e)
+        {
+            //Write your code for the "Load Students" button handler here
+
+
+        }
+
+        //Include your helper methods for Sorting here
+
+        private void UI_Sort_Btn_Click(object sender, EventArgs e)
+        { 
+            //Write your code for the "Display Sorted" button handler here
+
+
+        }
+
+        private void UI_DisplaySelected_Btn_Click(object sender, EventArgs e)
+        {
+            //Write your code for the "Display Selected" button handler here
+        }
+
+        
+
+        private void DisplayInListBox(List<Student> Std_List,ListBox LB)
+        {
+            //Write your code for the DisplayInListBox() method here
+           
+        }
+    }
+}

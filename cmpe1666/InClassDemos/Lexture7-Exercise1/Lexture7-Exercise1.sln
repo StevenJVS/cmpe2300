@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexture7-Exercise1", "Lexture7-Exercise1\Lexture7-Exercise1.csproj", "{92E4884B-3789-41CD-B674-FE9C498511BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92E4884B-3789-41CD-B674-FE9C498511BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E4884B-3789-41CD-B674-FE9C498511BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E4884B-3789-41CD-B674-FE9C498511BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E4884B-3789-41CD-B674-FE9C498511BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCB3256D-AF49-4666-8761-32A825AE2906}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.AssemblyReference.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.SuggestedBindingRedirects.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.Form1.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu3Solution.Properties.Resources.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.GenerateResource.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.CoreCompileInputs.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu3Solution.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu3Solution.pdb
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\bin\Debug\Le3Qu3Solution.exe.config
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\bin\Debug\Le3Qu3Solution.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\RunWinter2023\PracticeExams\PracticeExam03-Winter2023\PracticeExam3Q2Solution\Le3Qu2Solution\bin\Debug\Le3Qu3Solution.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\bin\Debug\Le3Qu3Solution.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\bin\Debug\Le3Qu3Solution.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\bin\Debug\Le3Qu3Solution.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.Form1.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu3Solution.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu2Solution.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu3Solution.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam3Solutions\PracticeExam3Q2Solution\Le3Qu2Solution\obj\Debug\Le3Qu3Solution.pdb

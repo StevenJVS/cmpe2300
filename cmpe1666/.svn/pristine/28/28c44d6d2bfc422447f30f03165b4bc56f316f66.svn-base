@@ -1,0 +1,104 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using GDIDrawer;
+
+namespace Lab4
+{
+    public partial class Form1 : Form
+    {
+        public struct LineSeg
+        {
+            public Point Start;
+            public Point End;
+            public byte thick;
+            public float alpha;
+            public Color color;
+
+            public LineSeg (Point _start, Point _end, byte _thickness, float _alpha, Color _color)
+            {
+                Start = _start;
+                End = _end;
+                thick = _thickness;
+                alpha = _alpha;
+                color = _color;
+            }
+        }
+       Stack<LinkedList<LineSeg>> stack= new Stack<LinkedList<LineSeg>>();
+        CDrawer canvas = new CDrawer(1024, 768, true);
+        bool draw = false;
+        Point pos;
+        byte Thick = 5;
+        float Alpha = (float)0.5;
+        Color Color = Color.Red;
+        int segcount = 0; 
+        int linecount = 0;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_timer_Tick(object sender, EventArgs e)
+        {
+            Point click;
+            Point current;
+            if(canvas.GetLastMouseLeftClick(out click) && click != pos && draw == false)
+            {
+                draw = true;
+                pos = click;
+                stack.Push(new LinkedList<LineSeg>());
+            }
+            if(draw && canvas.GetLastMousePosition(out current) && current != pos)
+            {
+                LineSeg line = new LineSeg(current, pos, Thick, Alpha, Color.FromArgb((int)(255*Alpha), Color));
+                canvas.AddLine(line.Start.X, line.Start.Y, line.End.X, line.End.Y, line.color, line.thick);
+                stack.Peek().AddFirst(line);
+                pos= current;
+                segcount++;
+            }
+            else if(canvas.GetLastMouseRightClick(out click))
+            {
+                draw= false;
+                pos = click;
+                linecount++;
+            }
+        }
+
+        private void UI_colorbtn_Click(object sender, EventArgs e)
+        {
+            UI_colordialog.ShowDialog();
+            UI_picturebox.BackColor = UI_colordialog.Color;
+            Color = UI_colordialog.Color;
+        }
+
+        private void UI_trackbar_Scroll(object sender, EventArgs e)
+        {
+            if (UI_thicknessrbtn.Checked)
+            {
+                UI_trackbar.TickFrequency = 10;
+                UI_thicknessrbtn.Text= $"Thickness: {Thick}";
+                UI_trackbar.Maximum = 100;
+                Thick = (byte)UI_trackbar.Value;
+            }
+            if (UI_alpharbtn.Checked)
+            {
+                UI_trackbar.TickFrequency = 10;
+                UI_alpharbtn.Text = $"Alpha: {Alpha}";
+                UI_trackbar.Maximum = 100;
+                Alpha = (float)UI_trackbar.Value/100;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            UI_thicknessrbtn.Text = $"Thickness: {Thick}";
+            UI_alpharbtn.Text = $"Alpha: {Alpha}";
+        }
+    }
+}

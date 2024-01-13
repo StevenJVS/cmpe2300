@@ -1,0 +1,10 @@
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\bin\Debug\LabExam3-Question2.exe.config
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\bin\Debug\LabExam3-Question2.exe
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\bin\Debug\LabExam3-Question2.pdb
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\obj\Debug\LabExam3-Question2.csprojAssemblyReference.cache
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\obj\Debug\LabExam3_Question2.Form1.resources
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\obj\Debug\LabExam3_Question2.Properties.Resources.resources
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\obj\Debug\LabExam3-Question2.csproj.GenerateResource.cache
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\obj\Debug\LabExam3-Question2.csproj.CoreCompileInputs.cache
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\obj\Debug\LabExam3-Question2.exe
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\LabExam3-Question2\LabExam3-Question2\obj\Debug\LabExam3-Question2.pdb

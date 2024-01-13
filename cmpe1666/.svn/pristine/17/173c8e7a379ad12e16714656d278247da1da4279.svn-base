@@ -1,0 +1,332 @@
+﻿//***********************************************************************************
+//Program: Ballz
+//Description: modify string using delegates
+//Date: 03/16/23
+//Author: Steven Santiago
+//Course: CMPE1666
+//Class: CNTA02
+//***********************************************************************************
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using GDIDrawer;
+using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+
+namespace lab3
+{
+    public partial class Form1 : Form
+    {
+        //instance of dialogs
+        public Scoredialog score = null;
+        public Animationdialog animation = null;
+        public HighScoredialog highscore = null;
+        //canvas
+        CDrawer canvas = new CDrawer();
+        //canvas dimensions
+        const int cheight = 600;
+        const int cwidth = 800;
+        //ball size
+        const int ball = 50;
+
+        //get number balls per column and rows
+        const int ballcol = cheight / ball;
+        const int ballrow = cwidth / ball;
+
+        //total score
+        int total = 0;
+
+        //balls 2d array
+        Ballz[,] ourballz = new Ballz[ballrow, ballcol];
+
+        //enum for ball state
+        public enum bState {alive, dead};
+
+        
+
+        //constructor for balls state and color
+        public struct Ballz
+        {
+            public Color _color;
+            public bState _state;
+
+            public Ballz(Color color, bState state)
+            {
+                _color = color;
+                _state = state;
+            }
+        }
+        public Form1()
+        {
+            InitializeComponent();
+            //create dialog for score and animation
+            score = new Scoredialog();
+            animation= new Animationdialog();
+        }
+        //event listener to display modeless dialogs
+        private void UI_Check(object sender, EventArgs e)
+        {
+            if (UI_Showscore.Checked)
+            {
+                // hide modeless dialog when user closes the window
+                score._dFormClosing = new delVoid(scoreFormclosing);
+                score.Show();//show dialog
+            }
+            else
+             score.Hide();
+            if (UI_AnimationSpeed.Checked)
+            {
+                // hide modeless dialog when user closes the window
+                animation._dFormClosing = new delVoidVoid(aniFormclosing);
+                animation.Show();//show dialog
+            }
+            else
+                animation.Hide();
+        }
+        private void UI_PlayBtn_Click(object sender, EventArgs e)
+        {
+
+            UI_PlayBtn.Enabled = false;//disable button
+            Difficulty difficulty= new Difficulty();//new difficulty dialog
+            if(DialogResult.OK == difficulty.ShowDialog())//open dialog
+            {
+                UI_timer.Enabled = true;//start timer
+                Randomize(difficulty.difficulty);//create alive balls in 2d array with color
+                Display();//display contents of array to canvas
+            }
+        }
+        //********************************************************************************************
+        //Method: Randomize
+        //Purpose: create balls and store into canvas
+        //Parameters: int num: number of colors
+        //Returns:
+        //*********************************************************************************************
+        private void Randomize(int num)
+        {            
+            //colors
+            Color[] mycolors = { Color.Red, Color.Green, Color.Blue, Color.Yellow, Color.Purple };
+            Random rand = new Random();
+            for(int x = 0; x < ballrow; x++)
+            {
+                for(int y = 0; y < ballcol; y++)
+                {
+                    //in balls array generate colors and set states to alive
+                    ourballz[x, y] = new Ballz(mycolors[rand.Next(0, num)], bState.alive);
+                }
+            }
+        }
+        //********************************************************************************************
+        //Method: Display
+        //Purpose: display contents of array to canvas
+        //Returns:
+        //*********************************************************************************************
+        private void Display()
+        {
+            canvas.Clear();
+
+            for (int x = 0; x < ballrow; x++)
+            {
+                for (int y = 0; y < ballcol; y++)
+                {
+                    //display balls only if they are alive
+                    if (ourballz[x, y]._state != bState.dead)
+                    {
+                        canvas.AddEllipse(x * ball, y * ball, 50, 50, ourballz[x, y]._color);
+                    }
+                }
+            }
+        }
+        //hide dialogs when user closes the modeless window
+        private void scoreFormclosing()
+        {
+            UI_Showscore.Checked = false;
+            score.Hide();
+        }
+        //hide dialogs when user closes the modeless window
+        private void aniFormclosing()
+        {
+            UI_AnimationSpeed.Checked = false;
+            animation.Hide();
+        }
+        //********************************************************************************************
+        //Method: public int BallsAlive
+        //Purpose:   Returns the number of alive balls
+        //Parameters: N/A
+        //Returns:   N/A
+        //*********************************************************************************************
+        public int BallsAlive()
+        {
+            int num = 0;//total off balls alive
+            for (int x = 0; x < ballrow; x++)
+            {
+                for (int y = 0; y < ballcol; y++)
+                {
+                    if (ourballz[x, y]._state == bState.alive)
+                    {
+                        //add total ablls
+                        num+=1;
+                    }
+                }
+            }
+
+            Console.WriteLine(num);
+            return num;//return total
+        }
+        //********************************************************************************************
+        //Method:    CheckBalls
+        //Purpose:   Refresh the GDIDrawer window
+        //Parameters: int row - the selected X coordinate
+        //           int col - the selected Y coordinate
+        //           Color color - the selected color to killed
+        //Returns:   int - the total balls killed
+        //*********************************************************************************************
+        public int CheckBalls(int row, int col, Color color)
+        {
+            //when row and column are invalid
+            if (row < 0 || row >= ballrow || col < 0 || col >= ballcol)
+            {
+                return 0;
+            }
+
+            //when the ball state is dead
+            if (ourballz[row, col]._state == bState.dead)
+            {
+                return 0;
+            }
+
+            //When the neighbour ball is not same color
+            if (ourballz[row, col]._color != color)
+            {
+                return 0;
+            }
+
+            //Change the state of that selected ball into dead
+            ourballz[row, col]._state = bState.dead;
+
+            //increase the number of balls killed by 1
+            int numKilled = 1;
+
+            // recursively check adjacent balls and sum the number of balls killed
+            numKilled += CheckBalls(row - 1, col, color); // above
+            numKilled += CheckBalls(row + 1, col, color); // below
+            numKilled += CheckBalls(row, col - 1, color); // left
+            numKilled += CheckBalls(row, col + 1, color); // right
+
+            //return integer
+            return numKilled;
+        }
+        //********************************************************************************************
+        //Method:    StepDown
+        //Purpose:   Returns the number of alive balls
+        //Returns:   
+        //*********************************************************************************************
+        public void StepDown()
+        {
+            for (int x = 0; x < ballrow; x++)
+            {
+                for (int y = 0; y < ballcol; y++)
+                {
+                    if (y - 1 >= 0)//prevent array to go out of bounds
+                    {
+                        if (ourballz[x, y]._state == bState.dead)//coordinate for dead ball
+                        {
+                            //If the 
+                            if (ourballz[x, y - 1]._state == bState.alive)//check if ablls above are alive
+                            {
+                                //swap dead and alive balls
+                                ourballz[x, y - 1]._state = bState.dead;
+                                ourballz[x, y]._state = bState.alive;
+                                ourballz[x, y]._color = ourballz[x, y - 1]._color;
+                                total++;
+                            }
+                        }
+                    }
+                }
+            }
+            //delay thread according to trackbar
+            Thread.Sleep(animation.AnimationSpeed);
+        }
+        //********************************************************************************************
+        //Method:    FallDown
+        //Purpose:   Drops the balls
+        //Returns:   
+        //*********************************************************************************************
+        public void FallDown()
+        {
+
+            foreach(Ballz i in ourballz)
+            {
+                StepDown();//drop balls
+
+                Display();//update canvas
+            }
+        }
+        //********************************************************************************************
+        //Method:    FallDown
+        //Purpose:   Drops the balls
+        //Returns:   
+        //*********************************************************************************************
+        public void Pick()
+        {
+            //Point variable
+            Point pointClicked;
+
+            //Get the left mouse click position
+            if (canvas.GetLastMouseLeftClickScaled(out  pointClicked))
+            {
+                int pointX = pointClicked.X / 50;
+                int pointY = pointClicked.Y / 50;
+                //Clear the selected area
+
+                
+                int num = CheckBalls(pointX, pointY, ourballz[pointX, pointY]._color);
+
+                //The balls falls down
+                FallDown();
+
+                //Score calculation
+                total += num * 50 + num * (num * 25);
+
+                //displays the score on the modeless dialog
+                score.score = total;
+
+                //Refresh the GDIDrawer window
+                Display();
+            }
+        }
+        //Checks if there is any balls alive
+
+        private void UI_timer_Tick(object sender, EventArgs e)
+        {
+            //calls ballsAlive() when the timer is enabled
+            int ballsAlive = BallsAlive();
+
+            //If all balls are killed
+            if (ballsAlive == 0)
+            {
+                highscore = new HighScoredialog();
+                highscore.score = total;
+                //Displays "Game Over" on the GDIDrawer window
+                canvas.AddText("Game Over", 78);
+                highscore.ShowDialog();
+
+                //Enables the play button and disable the timer
+                UI_PlayBtn.Enabled = true;
+                UI_timer.Enabled = false;
+            }
+            else
+            {
+                //Pick function is called
+                Pick();
+            }
+        }
+    }
+}

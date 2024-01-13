@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Threading;
+using System.Xml.Linq;
+
+namespace ica15
+{
+    public partial class Form1 : Form
+    {
+        Thread r;
+        Thread g;
+        Thread b;
+
+        int total = 0;
+        int sumred;
+        int sumgreen;
+        int sumblue;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_go_Click(object sender, EventArgs e)
+        {
+            UI_openfiledialog = new OpenFileDialog();
+            if(UI_openfiledialog.ShowDialog () == DialogResult.OK )
+            {
+                Bitmap bm = (Bitmap)Bitmap.FromFile(UI_openfiledialog.FileName);
+                UI_listbox.Items.Add("Starting...");
+                for (int x = 0; x < bm.Width;x++)
+                {
+                    for(int y = 0; y < bm.Height;y++)
+                    {
+                        Color pixel = bm.GetPixel(x, y);
+                        analyze(UI_openfiledialog.FileName,pixel);
+                        total+=1;
+                    }
+                }
+              
+            }
+        }
+        private void analyze(string fname, Color color)
+        {
+
+        }
+        private void status()
+        {
+
+        }
+
+        private void report()
+        {
+
+        }
+    }
+}

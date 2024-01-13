@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica11
+{
+    public partial class ModalDialogForm : Form
+    {
+        public string font
+        {
+            get
+            {
+
+            }
+            set
+            {
+
+            }
+        }
+        public ModalDialogForm()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_fontbtn_Click(object sender, EventArgs e)
+        {
+            fontDialog1= new FontDialog();
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                UI_fonttbx.Text = fontDialog1.Font.ToString();
+            }
+        }
+
+        private void UI_Colorbtn_Click(object sender, EventArgs e)
+        {
+            colorDialog1= new ColorDialog();
+            if (colorDialog1.ShowDialog()== DialogResult.OK)
+            {
+                UI_colortbx.Text= colorDialog1.Color.ToString();
+            }
+        }
+    }
+}

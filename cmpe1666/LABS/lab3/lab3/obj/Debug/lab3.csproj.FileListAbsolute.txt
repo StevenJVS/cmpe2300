@@ -1,0 +1,17 @@
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\bin\Debug\lab3.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\bin\Debug\lab3.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\bin\Debug\lab3.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.Difficulty.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.Form1.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.Animationdialog.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.Scoredialog.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\bin\Debug\GDIDrawer.dll
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.csproj.CopyComplete
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\LABS\lab3\lab3\obj\Debug\lab3.HighScoredialog.resources

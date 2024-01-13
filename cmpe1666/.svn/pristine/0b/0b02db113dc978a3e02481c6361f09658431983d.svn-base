@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace lab3
+{
+    public delegate void delVoid();
+    public partial class Scoredialog : Form
+    {
+        public delVoid _dFormClosing = null;
+        public int score
+        {
+            set
+            {
+                UI_Score.Text = $"{value}";
+            }
+        }
+        public Scoredialog()
+        {
+            InitializeComponent();
+        }     
+
+        private void Scoredialog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (null != _dFormClosing)
+                {
+                    if (_dFormClosing != null)
+                    {
+                        //call method from main
+                        _dFormClosing.Invoke();
+                    }
+                    //hide form
+                    e.Cancel = true;
+                    Hide();
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica9
+{
+    public partial class Form1 : Form
+    {
+        private struct Employees
+        {
+            public int _id;
+            public int _salary;
+            public Employees (int id, int salary)
+            {
+                _id = id;
+                _salary = salary;
+            }
+
+        }
+        List<int> emplist;
+        List<int> Salary;
+        public Form1()
+        {
+            InitializeComponent();
+            emplist = new List<int>();
+            Salary = new List<int>();
+        }
+    }
+}

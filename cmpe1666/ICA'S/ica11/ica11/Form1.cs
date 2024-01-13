@@ -1,0 +1,55 @@
+﻿//***********************************************************************************
+//Program: Fontify
+//Description: change font and color of label
+//Date: 03/14/23
+//Author: Steven Santiago
+//Course: CMPE1666
+//Class: CNTA02
+//***********************************************************************************
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica11
+{
+    public partial class Form1 : Form
+    {
+
+        public Form1()
+        {
+            InitializeComponent();
+            
+        }
+        //********************************************************************************************
+        //Method: UI_label_Click
+        //Purpose: open modal dialog 
+        //Returns:
+        //*********************************************************************************************
+        private void UI_label_Click(object sender, EventArgs e)
+        {
+            //create new modal dialog
+            ModalDialogForm dialog= new ModalDialogForm();            
+            dialog.ThisFont = UI_label.Font;
+            dialog.ThisForeColor= UI_label.ForeColor;
+            
+
+            if (DialogResult.OK == dialog.ShowDialog())//if user selected ok
+            {
+                //assign properties to label
+                UI_label.Font = dialog.ThisFont;
+                UI_label.ForeColor = dialog.ThisForeColor;
+            }
+            else
+            {
+                //show error message if modal dialog was closed
+                MessageBox.Show("Closed with Cancel or X button.");
+            }
+        }
+    }
+}

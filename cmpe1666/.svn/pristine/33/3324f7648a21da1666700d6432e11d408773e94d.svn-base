@@ -1,0 +1,144 @@
+﻿namespace Ica3
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.UI_label = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.UI_start = new System.Windows.Forms.Button();
+            this.UI_stop = new System.Windows.Forms.Button();
+            this.UI_Reset = new System.Windows.Forms.Button();
+            this.UI_split = new System.Windows.Forms.Button();
+            this.UI_timer = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // UI_label
+            // 
+            this.UI_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_label.AutoSize = true;
+            this.UI_label.Location = new System.Drawing.Point(339, 18);
+            this.UI_label.Name = "UI_label";
+            this.UI_label.Size = new System.Drawing.Size(0, 16);
+            this.UI_label.TabIndex = 0;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(7, 82);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(735, 308);
+            this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // UI_start
+            // 
+            this.UI_start.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.UI_start.Location = new System.Drawing.Point(748, 80);
+            this.UI_start.Name = "UI_start";
+            this.UI_start.Size = new System.Drawing.Size(75, 23);
+            this.UI_start.TabIndex = 2;
+            this.UI_start.Text = "Start";
+            this.UI_start.UseVisualStyleBackColor = true;
+            this.UI_start.Click += new System.EventHandler(this.UI_start_Click);
+            // 
+            // UI_stop
+            // 
+            this.UI_stop.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.UI_stop.Location = new System.Drawing.Point(748, 109);
+            this.UI_stop.Name = "UI_stop";
+            this.UI_stop.Size = new System.Drawing.Size(75, 23);
+            this.UI_stop.TabIndex = 3;
+            this.UI_stop.Text = "Stop";
+            this.UI_stop.UseVisualStyleBackColor = true;
+            this.UI_stop.Click += new System.EventHandler(this.UI_stop_Click);
+            // 
+            // UI_Reset
+            // 
+            this.UI_Reset.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.UI_Reset.Location = new System.Drawing.Point(748, 138);
+            this.UI_Reset.Name = "UI_Reset";
+            this.UI_Reset.Size = new System.Drawing.Size(75, 23);
+            this.UI_Reset.TabIndex = 4;
+            this.UI_Reset.Text = "Reset";
+            this.UI_Reset.UseVisualStyleBackColor = true;
+            this.UI_Reset.Click += new System.EventHandler(this.UI_Reset_Click);
+            // 
+            // UI_split
+            // 
+            this.UI_split.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_split.Location = new System.Drawing.Point(748, 378);
+            this.UI_split.Name = "UI_split";
+            this.UI_split.Size = new System.Drawing.Size(75, 23);
+            this.UI_split.TabIndex = 5;
+            this.UI_split.Text = "Split";
+            this.UI_split.UseVisualStyleBackColor = true;
+            this.UI_split.Click += new System.EventHandler(this.UI_split_Click);
+            // 
+            // UI_timer
+            // 
+            this.UI_timer.Enabled = true;
+            this.UI_timer.Interval = 20;
+            this.UI_timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(827, 413);
+            this.Controls.Add(this.UI_split);
+            this.Controls.Add(this.UI_Reset);
+            this.Controls.Add(this.UI_stop);
+            this.Controls.Add(this.UI_start);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.UI_label);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label UI_label;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button UI_start;
+        private System.Windows.Forms.Button UI_stop;
+        private System.Windows.Forms.Button UI_Reset;
+        private System.Windows.Forms.Button UI_split;
+        private System.Windows.Forms.Timer UI_timer;
+    }
+}
+

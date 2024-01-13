@@ -1,0 +1,22 @@
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\bin\Debug\ICA15-Solution.exe.config
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\bin\Debug\ICA15-Solution.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\bin\Debug\ICA15-Solution.pdb
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.AssemblyReference.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.SuggestedBindingRedirects.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\LE3Q2.Form1.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\ICA15_Solution.Properties.Resources.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.GenerateResource.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.CoreCompileInputs.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\ICA15-Solution.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Fall2022\PracticeExams\PracticeExam2Q1Starter\LE3Q2\PracticeExam2Q1\obj\Debug\ICA15-Solution.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\bin\Debug\ICA15-Solution.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\bin\Debug\ICA15-Solution.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\bin\Debug\ICA15-Solution.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\LE3Q2.Form1.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\ICA15_Solution.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\PracticeExam2Q1.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\ICA15-Solution.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam2\PracticeExam2Q1\PracticeExam2Q1\obj\Debug\ICA15-Solution.pdb

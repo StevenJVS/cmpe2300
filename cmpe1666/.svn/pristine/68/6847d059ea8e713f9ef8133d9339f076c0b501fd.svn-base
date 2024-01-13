@@ -1,0 +1,259 @@
+﻿namespace Lab2
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.UI_picturebox = new System.Windows.Forms.PictureBox();
+            this.UI_loadpicture_btn = new System.Windows.Forms.Button();
+            this.UI_contrast_rbtn = new System.Windows.Forms.RadioButton();
+            this.UI_tint_rbtn = new System.Windows.Forms.RadioButton();
+            this.UI_BW_rbtn = new System.Windows.Forms.RadioButton();
+            this.UI_noise_rbtn = new System.Windows.Forms.RadioButton();
+            this.UI_apply_btn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UI_trackbar = new System.Windows.Forms.TrackBar();
+            this.UI_min = new System.Windows.Forms.Label();
+            this.UI_mid = new System.Windows.Forms.Label();
+            this.UI_max = new System.Windows.Forms.Label();
+            this.UI_progressbar = new System.Windows.Forms.ProgressBar();
+            this.UI_openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.UI_picturebox)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UI_trackbar)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // UI_picturebox
+            // 
+            this.UI_picturebox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_picturebox.Location = new System.Drawing.Point(29, 20);
+            this.UI_picturebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_picturebox.Name = "UI_picturebox";
+            this.UI_picturebox.Size = new System.Drawing.Size(1000, 378);
+            this.UI_picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UI_picturebox.TabIndex = 0;
+            this.UI_picturebox.TabStop = false;
+            // 
+            // UI_loadpicture_btn
+            // 
+            this.UI_loadpicture_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UI_loadpicture_btn.Location = new System.Drawing.Point(29, 434);
+            this.UI_loadpicture_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_loadpicture_btn.Name = "UI_loadpicture_btn";
+            this.UI_loadpicture_btn.Size = new System.Drawing.Size(161, 28);
+            this.UI_loadpicture_btn.TabIndex = 1;
+            this.UI_loadpicture_btn.Text = "Load Picture";
+            this.UI_loadpicture_btn.UseVisualStyleBackColor = true;
+            this.UI_loadpicture_btn.Click += new System.EventHandler(this.UI_loadpicture_btn_Click);
+            // 
+            // UI_contrast_rbtn
+            // 
+            this.UI_contrast_rbtn.AutoSize = true;
+            this.UI_contrast_rbtn.Location = new System.Drawing.Point(9, 23);
+            this.UI_contrast_rbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_contrast_rbtn.Name = "UI_contrast_rbtn";
+            this.UI_contrast_rbtn.Size = new System.Drawing.Size(77, 20);
+            this.UI_contrast_rbtn.TabIndex = 2;
+            this.UI_contrast_rbtn.TabStop = true;
+            this.UI_contrast_rbtn.Text = "Contrast";
+            this.UI_contrast_rbtn.UseVisualStyleBackColor = true;
+            // 
+            // UI_tint_rbtn
+            // 
+            this.UI_tint_rbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_tint_rbtn.AutoSize = true;
+            this.UI_tint_rbtn.Location = new System.Drawing.Point(229, 23);
+            this.UI_tint_rbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_tint_rbtn.Name = "UI_tint_rbtn";
+            this.UI_tint_rbtn.Size = new System.Drawing.Size(50, 20);
+            this.UI_tint_rbtn.TabIndex = 3;
+            this.UI_tint_rbtn.TabStop = true;
+            this.UI_tint_rbtn.Text = "Tint";
+            this.UI_tint_rbtn.UseVisualStyleBackColor = true;
+            // 
+            // UI_BW_rbtn
+            // 
+            this.UI_BW_rbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UI_BW_rbtn.AutoSize = true;
+            this.UI_BW_rbtn.Location = new System.Drawing.Point(8, 76);
+            this.UI_BW_rbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_BW_rbtn.Name = "UI_BW_rbtn";
+            this.UI_BW_rbtn.Size = new System.Drawing.Size(102, 20);
+            this.UI_BW_rbtn.TabIndex = 4;
+            this.UI_BW_rbtn.TabStop = true;
+            this.UI_BW_rbtn.Text = "Black & White";
+            this.UI_BW_rbtn.UseVisualStyleBackColor = true;
+            // 
+            // UI_noise_rbtn
+            // 
+            this.UI_noise_rbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_noise_rbtn.AutoSize = true;
+            this.UI_noise_rbtn.Location = new System.Drawing.Point(226, 76);
+            this.UI_noise_rbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_noise_rbtn.Name = "UI_noise_rbtn";
+            this.UI_noise_rbtn.Size = new System.Drawing.Size(64, 20);
+            this.UI_noise_rbtn.TabIndex = 5;
+            this.UI_noise_rbtn.TabStop = true;
+            this.UI_noise_rbtn.Text = "Noise";
+            this.UI_noise_rbtn.UseVisualStyleBackColor = true;
+            // 
+            // UI_apply_btn
+            // 
+            this.UI_apply_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_apply_btn.Location = new System.Drawing.Point(929, 434);
+            this.UI_apply_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_apply_btn.Name = "UI_apply_btn";
+            this.UI_apply_btn.Size = new System.Drawing.Size(100, 28);
+            this.UI_apply_btn.TabIndex = 6;
+            this.UI_apply_btn.Text = "Apply";
+            this.UI_apply_btn.UseVisualStyleBackColor = true;
+            this.UI_apply_btn.Click += new System.EventHandler(this.UI_apply_btn_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.UI_tint_rbtn);
+            this.groupBox1.Controls.Add(this.UI_contrast_rbtn);
+            this.groupBox1.Controls.Add(this.UI_noise_rbtn);
+            this.groupBox1.Controls.Add(this.UI_BW_rbtn);
+            this.groupBox1.Location = new System.Drawing.Point(199, 430);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(299, 123);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Modification Type";
+            // 
+            // UI_trackbar
+            // 
+            this.UI_trackbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_trackbar.LargeChange = 10;
+            this.UI_trackbar.Location = new System.Drawing.Point(517, 434);
+            this.UI_trackbar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_trackbar.Maximum = 100;
+            this.UI_trackbar.Name = "UI_trackbar";
+            this.UI_trackbar.Size = new System.Drawing.Size(373, 56);
+            this.UI_trackbar.TabIndex = 8;
+            this.UI_trackbar.TickFrequency = 10;
+            // 
+            // UI_min
+            // 
+            this.UI_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UI_min.AutoSize = true;
+            this.UI_min.Location = new System.Drawing.Point(517, 505);
+            this.UI_min.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UI_min.Name = "UI_min";
+            this.UI_min.Size = new System.Drawing.Size(44, 16);
+            this.UI_min.TabIndex = 9;
+            this.UI_min.Text = "label1";
+            // 
+            // UI_mid
+            // 
+            this.UI_mid.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.UI_mid.AutoSize = true;
+            this.UI_mid.Location = new System.Drawing.Point(695, 487);
+            this.UI_mid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UI_mid.Name = "UI_mid";
+            this.UI_mid.Size = new System.Drawing.Size(44, 16);
+            this.UI_mid.TabIndex = 10;
+            this.UI_mid.Text = "label2";
+            // 
+            // UI_max
+            // 
+            this.UI_max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_max.AutoSize = true;
+            this.UI_max.Location = new System.Drawing.Point(844, 505);
+            this.UI_max.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UI_max.Name = "UI_max";
+            this.UI_max.Size = new System.Drawing.Size(44, 16);
+            this.UI_max.TabIndex = 11;
+            this.UI_max.Text = "label3";
+            // 
+            // UI_progressbar
+            // 
+            this.UI_progressbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UI_progressbar.Location = new System.Drawing.Point(29, 405);
+            this.UI_progressbar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UI_progressbar.Name = "UI_progressbar";
+            this.UI_progressbar.Size = new System.Drawing.Size(1000, 22);
+            this.UI_progressbar.TabIndex = 12;
+            // 
+            // UI_openFileDialog1
+            // 
+            this.UI_openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1045, 567);
+            this.Controls.Add(this.UI_progressbar);
+            this.Controls.Add(this.UI_max);
+            this.Controls.Add(this.UI_mid);
+            this.Controls.Add(this.UI_min);
+            this.Controls.Add(this.UI_trackbar);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.UI_apply_btn);
+            this.Controls.Add(this.UI_loadpicture_btn);
+            this.Controls.Add(this.UI_picturebox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1061, 605);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.UI_picturebox)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UI_trackbar)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox UI_picturebox;
+        private System.Windows.Forms.Button UI_loadpicture_btn;
+        private System.Windows.Forms.RadioButton UI_contrast_rbtn;
+        private System.Windows.Forms.RadioButton UI_tint_rbtn;
+        private System.Windows.Forms.RadioButton UI_BW_rbtn;
+        private System.Windows.Forms.RadioButton UI_noise_rbtn;
+        private System.Windows.Forms.Button UI_apply_btn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TrackBar UI_trackbar;
+        private System.Windows.Forms.Label UI_min;
+        private System.Windows.Forms.Label UI_mid;
+        private System.Windows.Forms.Label UI_max;
+        private System.Windows.Forms.ProgressBar UI_progressbar;
+        private System.Windows.Forms.OpenFileDialog UI_openFileDialog1;
+    }
+}
+

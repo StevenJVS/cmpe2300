@@ -1,0 +1,25 @@
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\LE3Q1.exe.config
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\LE3Q1.exe
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\LE3Q1.pdb
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\GDIDrawer.dll
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.AssemblyReference.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.Form1.resources
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.Properties.Resources.resources
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.GenerateResource.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.CoreCompileInputs.cache
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.CopyComplete
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.exe
+C:\Users\Owner\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.pdb
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\LE3Q1.exe.config
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\LE3Q1.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\LE3Q1.pdb
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\bin\Debug\GDIDrawer.dll
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.AssemblyReference.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.SuggestedBindingRedirects.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.Form1.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.Properties.Resources.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.GenerateResource.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.CoreCompileInputs.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.csproj.CopyComplete
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\Run-Winter2022\LabExams\LabExam3-Winter2022\LE3Q1\LE3Q1\obj\Debug\LE3Q1.pdb

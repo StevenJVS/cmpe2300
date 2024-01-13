@@ -1,0 +1,11 @@
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\bin\Debug\Lecture2BExercise2.exe.config
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\bin\Debug\Lecture2BExercise2.exe
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\bin\Debug\Lecture2BExercise2.pdb
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.csproj.AssemblyReference.cache
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.csproj.SuggestedBindingRedirects.cache
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.Form1.resources
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.Properties.Resources.resources
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.csproj.GenerateResource.cache
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.csproj.CoreCompileInputs.cache
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.exe
+C:\Users\oveeyenm\Desktop\oveeyenm\CMPE1666_A02\Lecture2BExercise2\Lecture2BExercise2\obj\Debug\Lecture2BExercise2.pdb

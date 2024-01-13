@@ -1,0 +1,228 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Security.AccessControl;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica8
+{
+    public partial class Form1 : Form
+    {
+        int min;
+        int max;
+        int numvalues;
+        int num;
+        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch(); 
+        List<int> myList;
+        List<int> myList2;
+        Random random = new Random();
+        public Form1()
+        {
+            InitializeComponent();
+            myList= new List<int>();
+            myList2= new List<int>();
+            sw.Stop();
+        }
+
+        private void UI_GenerateValues_Click(object sender, EventArgs e)
+        {
+            int.TryParse(UI_MaximumValue.Text, out max);
+            int.TryParse(UI_MinimumValue.Text, out min);
+            int.TryParse(UI_NumberofValues.Text, out numvalues);
+
+                if (min < 10)
+                {
+                    MessageBox.Show("Please a minimum value greater than 10", "Error", MessageBoxButtons.OK);
+                }
+                if (min > max)
+                {
+                    MessageBox.Show("Minimum value is greater than the maximum value", "Error", MessageBoxButtons.OK);
+                }
+                if (UI_NumberofValues == null || UI_MinimumValue == null || UI_MaximumValue == null) 
+                {
+                    MessageBox.Show("Please enter a value in all fields", "Error", MessageBoxButtons.OK);
+                }
+                if(!int.TryParse(UI_MaximumValue.Text, out max) || !int.TryParse(UI_MinimumValue.Text, out min) || !int.TryParse(UI_NumberofValues.Text, out numvalues))
+                {
+                    MessageBox.Show("Please enter integer values", "Error", MessageBoxButtons.OK);
+                }
+
+                if(min >= 10 && min < max && UI_NumberofValues.Text != null)
+                {
+                    for (int i = 0; i < numvalues; i++)
+                    {
+                        num = random.Next(min, max+1);
+                        myList.Add(num);
+                        UI_GeneratedList.Text += $"{num} ";
+                    }
+
+                }
+
+
+
+        }
+        private void UI_SortValues_Click(object sender, EventArgs e)
+        {    
+            sw.Start();
+            if(UI_Bubble.Checked)
+            {
+                myList2 = bubblesort(myList);
+                foreach (int num in myList2)
+                {
+                    UI_SortedList.Text += $"{num} ";
+                }
+                sw.Stop();
+                long ElapsedTime = sw.ElapsedTicks;
+                UI_SortingTimeTicks.Text = ElapsedTime.ToString();
+            }
+            else if(UI_Selection.Checked)
+            {
+                myList2 = selectionsort(myList);
+                foreach (int num in myList2)
+                {
+                    UI_SortedList.Text += $"{num} ";
+                }
+                sw.Stop();
+                long ElapsedTime = sw.ElapsedTicks;
+                UI_SortingTimeTicks.Text = ElapsedTime.ToString();
+            }
+            else if(UI_Insertion.Checked)
+            {
+                myList2 = insertion(myList);
+                foreach (int num in myList2)
+                {
+                    UI_SortedList.Text += $"{num} ";
+                }
+                sw.Stop();
+                long ElapsedTime = sw.ElapsedTicks;
+                UI_SortingTimeTicks.Text = ElapsedTime.ToString();
+            }
+            else if(UI_QuickSort.Checked)
+            {
+                int low = 0;
+                int high = myList.Count - 1;
+                myList2 = quicksort(myList,low,high);
+                foreach (int num in myList2)
+                {
+                    UI_SortedList.Text += $"{num} ";
+                }
+                sw.Stop();
+                long ElapsedTime = sw.ElapsedTicks;
+                UI_SortingTimeTicks.Text = ElapsedTime.ToString();
+            }
+        }
+        private void UI_ClearRaw_Click(object sender, EventArgs e)
+        {
+            UI_GeneratedList.Text = null;
+        }
+
+        private void UI_Redisplay_Click(object sender, EventArgs e)
+        {
+            foreach(int i in myList)
+            {
+                UI_GeneratedList.Text += myList[i];
+            }
+        }
+
+        private void UI_ClearSorted_Click(object sender, EventArgs e)
+        {
+            sw.Reset();
+            UI_SortingTimeTicks.Text = null;
+            UI_SortedList.Text = null;
+        }
+        private static List<int> bubblesort(List<int> myList)
+        {
+            int n = myList.Count;
+            for (int p = 0; p < n - 1; p++)
+            {
+                for (int j = 0; j < (n - (p+1)); j++)
+                {
+                    if (myList[j] > myList[j + 1])
+                    {
+                        swap(myList, j, j + 1);
+                    }
+                }
+            }
+            return myList;
+        }
+        private static void swap(List<int> myList, int x, int y)
+        {
+            int temp = myList[x];
+            myList[x] = myList[y];
+            myList[y] = temp;
+        }
+        private static List<int> selectionsort(List<int> myList)
+        {
+            int maxpos = 0;
+            int lastposn;
+            int n = myList.Count;
+            for (int pass = 0; pass < n-1; pass++) 
+            {
+                lastposn = n - 1 - pass;
+                for(int j = 0; j<n-pass; j++)
+                {
+                    if (myList[j] > myList[maxpos])
+                    {
+                        maxpos = j;
+                    }                   
+                }
+                swap(myList, maxpos, lastposn);
+            }
+            return myList;
+        }
+        private static List<int> insertion(List<int> myList)
+        {
+            int n = myList.Count;
+            for (int p = 1; p < n; p++)
+            {
+                int temp = myList[p];
+                int j = p-1;
+                while((j>=0)&& (myList[j] > temp))
+                {
+                    myList[j+1] = myList[j];
+                    j = j - 1;
+                }
+                myList[j+1] = temp;
+            }
+            return myList;
+        }
+        private static List<int> quicksort(List<int> myList, int low, int high)
+        {
+            int pi;
+
+            if (low < high)
+            {
+                pi = partition(myList, low, high);
+                quicksort(myList, low, pi -1);
+                quicksort(myList, pi +1, high);
+            }
+            return myList;
+        }
+        private static int partition(List<int> myList, int low, int high) 
+        {
+            int pi = myList[high];
+            int i = low - 1;
+            for (int j = low; j < high; j++)
+            {
+                if (myList[j] < pi)
+                {
+                    i++;
+                    swap(myList, i, j);
+                }
+            }
+            swap(myList, i + 1, high);
+            return(i+1);
+        }
+
+        private void UI_Insertion_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+}

@@ -1,0 +1,106 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Drawing;
+using GDIDrawer;
+
+namespace lab1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double num;
+            double[] count = { };
+
+            Console.WriteLine("\t\t\tSteven Santiago - Lab1");
+            GetValue("How much money do you wish to convert", out num);
+            Console.WriteLine(num);
+            count = GetCash(num);
+            DisplayCash(num, count);
+            Console.ReadKey();
+        }
+        static double GetValue(string prompt, out double num)
+        {
+            string input;
+            do
+            {
+                Console.WriteLine(prompt);
+                input = Console.ReadLine();
+                input = input.Replace("$", " ");
+                double.TryParse(input, out num);
+
+                if (!double.TryParse(input, out num))
+                    Console.WriteLine("Invalid input.");
+
+            } while (!double.TryParse(input, out num));
+
+            return num;
+        }
+        static double[] GetCash(double num)
+        {
+            double[] array = { 50, 20, 10, 5, 2, 1, 0.25, 0.10, 0.05 };
+            double[] count = new double[array.Length];
+            string[] note = { "fifty", "twenty", "ten", "five", "toonie", "loonie", "quarter", "dime", "nickel" };
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (num >= array[i])
+                {
+                    count[i] = num / array[i];
+                    num = num % array[i];
+                    num = Math.Round(num, 2);
+                }
+            }
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(note[i] + " x " + (int)count[i]);
+            }
+            return count ;
+        }
+        static void DisplayCash(double num, double[] count)
+        {
+            CDrawer canvas = new CDrawer();
+
+            Color[] colors = {Color.Red, Color.Green, Color.Purple, Color.LightBlue, Color.YellowGreen, Color.YellowGreen,
+            Color.Yellow, Color.Gray,Color.Gray,Color.Gray};
+
+            string[] note = { "$50 x", "$20 x ", "$10 x ", "$5 x ", "$2 x ", "$1 x " ,"$0.25 x ", "$0.10 x ", "$0.05 x " };
+            int[] y = { 100, 200, 300, 400, 500, 100, 200, 300, 400 };
+            int[] x = { 200, 200, 200, 200, 200, 600, 600, 600, 600 };
+            for (int xAndY = 0; xAndY < y.Length; xAndY++)
+            {
+                for (int i = 0; i < count.Length; i++)
+                {
+                    if (count[i] >= 1)
+                    {
+                        string amount = note[i] + $" {(int)count[i]}";
+                        if (i < 4)
+                        {
+                            canvas.AddCenteredRectangle(x[xAndY], y[xAndY], 200, 95, colors[i], 2, Color.Gray);
+                            canvas.AddText(amount, 15, x[xAndY] / 2, y[xAndY] - 50, 200, 100, Color.Black);
+                            count[i] = 0;
+
+                        }
+                        else if (i > 3 && i < 9)
+                        {
+                            canvas.AddCenteredEllipse(x[xAndY], y[xAndY], 100, 100, colors[i]);
+                            canvas.AddText(amount, 15, x[xAndY] - 50, y[xAndY] - 50, 100, 100, Color.Black);
+                            count[i] = 0;
+
+                        }
+                        i += ((count.Length + i) - 1);
+                    }
+
+                }
+
+            }
+
+        }
+        }
+}
+
+

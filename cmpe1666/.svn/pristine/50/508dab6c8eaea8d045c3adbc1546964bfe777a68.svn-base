@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica18
+{
+    public partial class Form1 : Form
+    {
+        public struct CustomerAmount
+        {
+            int CustomerId;
+            decimal AmountDue;
+
+            public CustomerAmount(int _id, decimal due)
+            {
+                CustomerId = _id;
+                AmountDue = due;
+            }
+            public override string ToString()
+            {
+                return $"{CustomerId}: {AmountDue}";
+            }
+
+        }
+        LinkedList<CustomerAmount> customerlist = new LinkedList<CustomerAmount>();
+        Random random = new Random();
+        public Form1()
+        {
+            InitializeComponent();
+        }
+    }
+}

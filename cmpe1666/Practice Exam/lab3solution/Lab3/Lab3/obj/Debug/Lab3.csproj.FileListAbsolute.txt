@@ -1,0 +1,17 @@
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\bin\Debug\Lab3.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\bin\Debug\Lab3.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\bin\Debug\Lab3.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\bin\Debug\GDIDrawer.dll
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.Animation_Speed.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.Form1.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.HighScore.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.Score.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.Select_Diffculty.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.csproj.CopyComplete
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\lab3solution\Lab3\Lab3\obj\Debug\Lab3.pdb

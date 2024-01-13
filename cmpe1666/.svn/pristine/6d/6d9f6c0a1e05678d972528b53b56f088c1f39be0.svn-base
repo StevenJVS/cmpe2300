@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica8
+{
+    public partial class Form1 : Form
+    {
+        int min;
+        int max;
+        int numvalues;
+        int num;
+        List<int> myList;
+        Random random = new Random();
+        public Form1()
+        {
+            InitializeComponent();
+            myList= new List<int>();
+        }
+
+        private void UI_GenerateValues_Click(object sender, EventArgs e)
+        {
+            int.TryParse(UI_MaximumValue.Text, out max);
+            int.TryParse(UI_MinimumValue.Text, out min);
+            int.TryParse(UI_NumberofValues.Text, out numvalues);
+            try
+            {
+                if(min >= 10 && min < max && UI_NumberofValues.Text != null)
+                {
+                    for (int i = 0; i < numvalues; i++)
+                    {
+                        num = random.Next(min, max+1);
+                        myList.Add(num);
+                        UI_GeneratedList.Items.Add(num);
+                    }
+
+                }
+            }
+            catch
+            {
+                if (min < 10)
+                {
+                    MessageBox.Show("Please a minimum value greater than 10", "Error", MessageBoxButtons.OK);
+                }
+                if (min > max)
+                {
+                    MessageBox.Show("Minimum value is greater than the maximum value", "Error", MessageBoxButtons.OK);
+                }
+                if (UI_NumberofValues == null || UI_MinimumValue == null || UI_MaximumValue == null) 
+                {
+                    MessageBox.Show("Please enter a value in all fields", "Error", MessageBoxButtons.OK);
+                }
+                if(!int.TryParse(UI_MaximumValue.Text, out max) || !int.TryParse(UI_MinimumValue.Text, out min) || !int.TryParse(UI_NumberofValues.Text, out numvalues))
+                {
+                    MessageBox.Show("Please enter integer values", "Error", MessageBoxButtons.OK);
+                }
+            }
+        }
+    }
+}

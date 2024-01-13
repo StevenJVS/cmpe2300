@@ -1,0 +1,154 @@
+﻿//***********************************************************************************
+//Program: Pally Thread
+//Description: Indiates which strings are palindromes
+//Date: 03/27/23
+//Author: Steven Santiago
+//Course: CMPE1666
+//Class: CNTA02
+//***********************************************************************************
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Threading;
+using System.IO;
+using System.Collections;
+
+namespace ica14
+{
+    public delegate bool delstring(string s);//create string delegate
+    public delegate void delvoid(bool c);//create bool delegate
+    public delegate void deldelvoid();
+    public partial class Form1 : Form
+    {
+        //instance of the delegate
+        public delstring _delstring = null;
+        public delvoid _delvoid = null;
+        public deldelvoid _deldelvoid = null;
+
+        //stop watch
+        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+
+        StreamReader sr;//stream reader
+        List<string> list;//list
+        List<string> copylist;//modified list
+<<<<<<< .mine
+
+||||||| .r202
+      
+=======
+
+        Thread th = null;
+      
+>>>>>>> .r206
+        public Form1()
+        {
+            InitializeComponent();
+            //set delegates
+            _delstring = new delstring(IsPalindrome);
+            _delvoid = new delvoid(Check);
+            _deldelvoid = new deldelvoid(display);
+            sw.Stop();//stop timer
+        }
+        private void UI_loadfile_Click(object sender, EventArgs e)
+        {
+
+            UI_openfiledialog = new OpenFileDialog();//new dialog
+            if (UI_openfiledialog.ShowDialog() == DialogResult.OK)//check for resullts
+            {
+                sr = new StreamReader(UI_openfiledialog.FileName);//new stream reader
+                list = new List<string>(File.ReadAllLines(UI_openfiledialog.FileName));//add lines
+                Ui_list.Text = $"Loaded {list.Count} words!";//display counted lines
+            }
+        }
+        private void UI_Find_Click(object sender, EventArgs e)
+        {
+            Ui_list.Text = null;//clear list box
+
+            //_deldelvoid.Invoke();
+            th = new Thread(Thread);//create new thread
+            th.IsBackground = true;//background thread
+            th.Start();//start timer
+
+<<<<<<< .mine
+            for (int i = 0; i < copylist.Count; i++)//go through list
+||||||| .r202
+            for(int i = 0; i < copylist.Count; i++)//go through list
+=======
+        }
+        private void display()
+        {
+            for (int i = 0; i < copylist.Count; i++)//go through list
+>>>>>>> .r206
+            {
+                Ui_list.Text += $"{copylist[i]}, ";//add display contents to list box
+            }
+            Ui_list.Text += $"there are {copylist.Count} palindromes with a time of {sw.ElapsedMilliseconds}ms";
+        }
+        //********************************************************************************************
+        //Method: Thread
+        //Purpose: add palindromes to list
+        //Parameters: 
+        //Returns: 
+        //*********************************************************************************************
+        private void Thread()
+        {
+            sw.Restart();
+            copylist = new List<string>();//new list
+            for (int i = 0; i < list.Count; i++)//go through original list
+            {
+                bool check = IsPalindrome(list[i]);//check if contents strings are palindromes
+                if (check)//if true
+                {
+                    copylist.Add(list[i]);//add to palindrome list
+                }
+            }
+            //sw.Stop();//stop timer
+            Invoke(_deldelvoid);//invokes delegate from the main form
+
+            //diplay number strings and time
+        }
+        private void Ui_test_Click(object sender, EventArgs e)
+        {
+            _delvoid.Invoke(_delstring.Invoke(UI_textbox.Text));//check if string is a palindrome
+        }
+        //********************************************************************************************
+        //Method: IsPalindrome
+        //Purpose: Checks if the selected string is a palindrome
+        //Parameters: string text
+        //Returns: true if string is a palindrome
+        //*********************************************************************************************
+        private bool IsPalindrome(string text)
+        {
+            if (text.Length <= 1)//check if there are letters in string
+                return true;//if it check all letters, return true
+            else
+            {
+                if (text[0] != text[text.Length - 1])//if current index +n and last index -n does not equal, return false
+                    return false;
+                else
+                    return IsPalindrome(text.Substring(1, text.Length - 2));//run method again if equal
+            }
+        }
+        //********************************************************************************************
+        //Method: Check
+        //Purpose: Display message if palindrome is true
+        //Returns:
+        //*********************************************************************************************
+        private void Check(bool check)
+        {
+            //print True if palindrome is detected
+            if (check == true)
+                UI_textbox.Text = $"{UI_textbox.Text} is a palindrome";
+            //print false if palindrome is not detected
+            else
+                UI_textbox.Text = $"{UI_textbox.Text} is not a palindrome";
+        }
+
+    }
+}

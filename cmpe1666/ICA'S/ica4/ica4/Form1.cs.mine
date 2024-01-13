@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ica4
+{
+    public partial class Form1 : Form
+    {
+        string input;
+        double num;
+        double kilo = 1.609344;
+        double mile = 0.62137119;
+        string output;
+        bool select = false;
+        bool kilom = false;
+        bool milem = false;
+        bool error = false;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void UI_input_TextChanged(object sender, EventArgs e)
+        {
+            input = UI_input.Text;
+            double.TryParse(input, out num);
+
+            if (!double.TryParse(input, out num))
+                error = true;
+
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+                if (num < 0)
+                {
+                    UI_output.Text = "Please enter a valid input";
+                
+                }
+
+            if (UI_Kilometres_CheckedChanged() = true)
+            {
+                UI_output.Text = $"{num / kilo:f2}";               
+            }
+            else if (milem == true)
+            {
+                UI_output.Text = $"{num / mile:f2}";
+            }
+
+        }
+
+        private void UI_Miles_CheckedChanged(object sender, EventArgs e)
+        {
+            kilom = true;
+            milem = false;
+        }
+
+        private void UI_Kilometres_CheckedChanged(object sender, EventArgs e)
+        {
+            kilom = false;
+            
+        }
+    }
+}

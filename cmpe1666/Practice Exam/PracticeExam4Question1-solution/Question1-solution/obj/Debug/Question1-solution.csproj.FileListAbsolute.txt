@@ -1,0 +1,38 @@
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\Question1-solution.exe.config
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\Question1-solution.exe
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\Question1-solution.pdb
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\GDIDrawer.dll
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csprojAssemblyReference.cache
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1_solution.Properties.Resources.resources
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.GenerateResource.cache
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.CoreCompileInputs.cache
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.CopyComplete
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.exe
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.pdb
+C:\Users\ovn0562\OneDrive\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1_solution.UI_LE3Q1_Form.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\Question1-solution.exe.config
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\Question1-solution.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\Question1-solution.pdb
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\bin\Debug\GDIDrawer.dll
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.AssemblyReference.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.SuggestedBindingRedirects.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1_solution.UI_LE3Q1_Form.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1_solution.Properties.Resources.resources
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.GenerateResource.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.CoreCompileInputs.cache
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.CopyComplete
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.exe
+C:\Users\oveeyenm\OneDrive - NAIT\Desktop\NaitCourses\CMPE1666-Intermediate Programming\LabExams-OM\LabExam3-Fall2021\Question1-solution\Question1-solution\obj\Debug\Question1-solution.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\bin\Debug\Question1-solution.exe.config
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\bin\Debug\Question1-solution.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\bin\Debug\Question1-solution.pdb
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\bin\Debug\GDIDrawer.dll
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1_solution.UI_LE3Q1_Form.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1_solution.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1-solution.csproj.CopyComplete
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1-solution.exe
+C:\Users\steve\OneDrive\Desktop\A02_2023_Winter\cmpe1666\Practice Exam\PracticeExam4Question1-solution\Question1-solution\obj\Debug\Question1-solution.pdb
