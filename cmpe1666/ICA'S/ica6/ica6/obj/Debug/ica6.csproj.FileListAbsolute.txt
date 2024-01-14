@@ -11,3 +11,15 @@ C:\Users\ssantiago1\Documents\Repos\ICA'S\ica6\ica6\obj\Debug\ica6.exe
 C:\Users\ssantiago1\Documents\Repos\ICA'S\ica6\ica6\obj\Debug\ica6.pdb
 C:\Users\ssantiago1\Documents\Repos\ICA'S\ica6\ica6\bin\Debug\GDIDrawer.dll
 C:\Users\ssantiago1\Documents\Repos\ICA'S\ica6\ica6\obj\Debug\ica6.csproj.CopyComplete
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\bin\Debug\ica6.exe.config
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\bin\Debug\ica6.exe
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\bin\Debug\ica6.pdb
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\bin\Debug\GDIDrawer.dll
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.Form1.resources
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.Properties.Resources.resources
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.csproj.CopyComplete
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.exe
+C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\cmpe1666\ICA'S\ica6\ica6\obj\Debug\ica6.pdb
