@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GDIDrawer;
@@ -14,10 +15,25 @@ namespace lab1
     public partial class Form1 : Form
     {
         Bitmap maze;
+        CDrawer canvas;
         public enum State {open, wall, visited};
         State[,] blockstate;
         Point start;
         Point end;
+        int steps = 0;
+
+        //obj
+        struct CurrPoint
+        {
+            public Point point;
+            public Color color;
+
+            public CurrPoint(Point mypoint, Color mycolor)
+            {
+                point = mypoint;
+                color = mycolor;
+            }
+        }
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +60,7 @@ namespace lab1
                     blockstate = new State[maze.Width, maze.Height];
 
                     //create canvas
-                    CDrawer canvas = new CDrawer(maze.Width*10, maze.Height*10);
+                    canvas = new CDrawer(maze.Width*10, maze.Height*10);
                     canvas.Scale = 10;
 
                     for (int i = 0; i < maze.Width; i++)
@@ -80,12 +96,53 @@ namespace lab1
 
         private void UI_Solve_Btn_Click(object sender, EventArgs e)
         {
-            if (blockstate != null) { }
-            Solve(start.X, start.Y);
+            if (blockstate != null) {
+                Color color = Color.Green;
+                Thread solve = new Thread(new ParameterizedThreadStart(Solve));
+                solve.Start(new CurrPoint(start,Color.Green));
+            }
         }
-        private void Solve(int x, int y)
+        private void Solve(object objData)
         {
-            if()
+            if (objData is CurrPoint) {
+                //unboxing
+                CurrPoint thispoint = (CurrPoint)objData;
+                int x = thispoint.point.X;
+                int y = thispoint.point.Y;
+                Color color = thispoint.color;
+
+                if (blockstate[x, y] == State.wall)
+                {
+                    return;
+                }
+                if (blockstate[x, y] == State.visited)
+                {
+                    return;
+                }
+                canvas.SetBBScaledPixel(x, y, Color.Purple);//paint canvas
+                color = Color.Purple;
+
+                CurrPoint pointup = thispoint;
+                pointup.point.X = pointup.point.X + 1;
+                pointup.color = color;
+
+                CurrPoint pointdown = thispoint;
+                pointdown.point.X = pointdown.point.X - 1;
+                pointdown.color = color;
+
+                CurrPoint pointright = thispoint;
+                pointright.point.Y = pointright.point.Y - 1;
+                pointright.color = color;
+
+                CurrPoint pointleft = thispoint;
+                pointleft.point.Y = pointleft.point.Y + 1;
+                pointleft.color = color;
+                
+                Solve(pointup);
+                Solve(pointdown);
+                Solve(pointright);
+                Solve(pointleft);
+            }
         }
     }
 }
