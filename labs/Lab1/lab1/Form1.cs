@@ -22,18 +22,6 @@ namespace lab1
         Point end;
         int steps = 0;
 
-        //obj
-        struct CurrPoint
-        {
-            public Point point;
-            public Color color;
-
-            public CurrPoint(Point mypoint, Color mycolor)
-            {
-                point = mypoint;
-                color = mycolor;
-            }
-        }
         public Form1()
         {
             InitializeComponent();
@@ -98,54 +86,39 @@ namespace lab1
         {
             if (blockstate != null) {
                 Color color = Color.Green;
-                Thread solve = new Thread(new ParameterizedThreadStart(Solve));
-                solve.Start(new CurrPoint(start,Color.Green));
+                Thread solve = new Thread(Solve);
+                solve.Start();
             }
         }
-        private void Solve(object objData)
+        public int Solve()
         {
-            if (objData is CurrPoint) {
-                //unboxing
-                CurrPoint thispoint = (CurrPoint)objData;
-                int x = thispoint.point.X;
-                int y = thispoint.point.Y;
-                Color color = thispoint.color;
-
-                if (x < 0 || x > maze.Width || y < 0 || y > maze.Height || blockstate[x, y] == State.wall || blockstate[x, y] == State.visited)
-                {
-                    return;
-                }
-                canvas.SetBBScaledPixel(x, y, Color.Purple);//paint canvas
-                color = Color.Purple;
-
-                CurrPoint pointright = thispoint;
-                pointright.point.X = pointright.point.X + 1;
-                pointright.color = color;
-
-                CurrPoint pointleft = thispoint;
-                pointleft.point.X = pointleft.point.X - 1;
-                pointleft.color = color;
-
-                CurrPoint pointup = thispoint;
-                pointup.point.Y = pointup.point.Y - 1;
-                pointup.color = color;
-
-                CurrPoint pointdown = thispoint;
-                pointdown.point.Y = pointdown.point.Y + 1;
-                pointdown.color = color;
-                
-                if(y >= 0)
-                Solve(pointup);
-                if(y <= maze.Height)
-                Solve(pointdown);
-                if(x <= maze.Height)
-                Solve(pointright);
-                if(x >= 0)
-                Solve(pointleft);
-
-                if (x == end.X && y == end.Y)
-                    return;
+            if (curr.X == end.X && curr.Y == end.Y)
+                return 1;
+            if (curr.X < 0 || curr.X > maze.Width || curr.Y < 0 || curr.Y > maze.Height || blockstate[curr.X, curr.Y] == State.wall || blockstate[curr.X, curr.Y] == State.visited)
+            {
+                return 0;
             }
+            canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Purple);//paint canvas
+
+            CurrPoint pointright = thispoint;
+            pointright.point.X = pointright.point.X + 1;
+            pointright.color = color;
+
+            CurrPoint pointleft = thispoint;
+            pointleft.point.X = pointleft.point.X - 1;
+            pointleft.color = color;
+
+            CurrPoint pointup = thispoint;
+            pointup.point.Y = pointup.point.Y - 1;
+            pointup.color = color;
+
+            CurrPoint pointdown = thispoint;
+            pointdown.point.Y = pointdown.point.Y + 1;
+            pointdown.color = color;
+                Solve();
+                Solve();
+                Solve();
+                Solve();
         }
     }
 }
