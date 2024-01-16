@@ -10,3 +10,16 @@ C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\labs\Lab1\lab1\obj\Debug\la
 C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.pdb
 C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\labs\Lab1\lab1\bin\Debug\GDIDrawer.dll
 C:\Users\steve\OneDrive\Documents\CNT\Term3\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.csproj.CopyComplete
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\bin\Debug\lab1.exe.config
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\bin\Debug\lab1.exe
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\bin\Debug\lab1.pdb
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\bin\Debug\GDIDrawer.dll
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.csproj.AssemblyReference.cache
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.csproj.SuggestedBindingRedirects.cache
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.Form1.resources
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.Properties.Resources.resources
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.csproj.GenerateResource.cache
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.csproj.CopyComplete
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.exe
+C:\Users\steve\OneDrive\Desktop\CNT\Term3\cmpe2300\cmpe2300\labs\Lab1\lab1\obj\Debug\lab1.pdb

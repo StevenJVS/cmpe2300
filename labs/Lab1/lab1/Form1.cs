@@ -111,37 +111,40 @@ namespace lab1
                 int y = thispoint.point.Y;
                 Color color = thispoint.color;
 
-                if (blockstate[x, y] == State.wall)
-                {
-                    return;
-                }
-                if (blockstate[x, y] == State.visited)
+                if (x < 0 || x > maze.Width || y < 0 || y > maze.Height || blockstate[x, y] == State.wall || blockstate[x, y] == State.visited)
                 {
                     return;
                 }
                 canvas.SetBBScaledPixel(x, y, Color.Purple);//paint canvas
                 color = Color.Purple;
 
-                CurrPoint pointup = thispoint;
-                pointup.point.X = pointup.point.X + 1;
-                pointup.color = color;
-
-                CurrPoint pointdown = thispoint;
-                pointdown.point.X = pointdown.point.X - 1;
-                pointdown.color = color;
-
                 CurrPoint pointright = thispoint;
-                pointright.point.Y = pointright.point.Y - 1;
+                pointright.point.X = pointright.point.X + 1;
                 pointright.color = color;
 
                 CurrPoint pointleft = thispoint;
-                pointleft.point.Y = pointleft.point.Y + 1;
+                pointleft.point.X = pointleft.point.X - 1;
                 pointleft.color = color;
+
+                CurrPoint pointup = thispoint;
+                pointup.point.Y = pointup.point.Y - 1;
+                pointup.color = color;
+
+                CurrPoint pointdown = thispoint;
+                pointdown.point.Y = pointdown.point.Y + 1;
+                pointdown.color = color;
                 
+                if(y >= 0)
                 Solve(pointup);
+                if(y <= maze.Height)
                 Solve(pointdown);
+                if(x <= maze.Height)
                 Solve(pointright);
+                if(x >= 0)
                 Solve(pointleft);
+
+                if (x == end.X && y == end.Y)
+                    return;
             }
         }
     }
