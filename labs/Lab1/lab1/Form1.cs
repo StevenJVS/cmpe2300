@@ -125,19 +125,19 @@ namespace lab1
         {
             List<Point> path = new List<Point>();
 
-            if (blockstate[nextpoint.X + 1, nextpoint.Y] == State.open && nextpoint.X > maze.Width)
+            if (nextpoint.X < maze.Width && blockstate[nextpoint.X + 1, nextpoint.Y] == State.open)
             {
                 path.Add(nextpoint);
             }
-            if (blockstate[nextpoint.X - 1, nextpoint.Y] == State.open && nextpoint.X < 0)
+            if (nextpoint.X > 0 && blockstate[nextpoint.X - 1, nextpoint.Y] == State.open)
             {
                 path.Add(nextpoint);
             }
-            if (blockstate[nextpoint.X, nextpoint.Y + 1] == State.open && nextpoint.Y > maze.Height)
+            if (nextpoint.Y < maze.Height && blockstate[nextpoint.X, nextpoint.Y + 1] == State.open)
             {
                 path.Add(nextpoint);
             }
-            if (blockstate[nextpoint.X, nextpoint.Y - 1] == State.open && nextpoint.Y < 0)
+            if (nextpoint.Y > 0 && blockstate[nextpoint.X, nextpoint.Y - 1] == State.open)
             {
                 path.Add(nextpoint);
             }
