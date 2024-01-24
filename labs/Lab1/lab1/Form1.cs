@@ -19,7 +19,7 @@ namespace lab1
         Thread solve;
         int steps = 0;
 
-        List<Point> paths = null;
+        List<Point> paths = new List<Point>();
         public Form1()
         {
             InitializeComponent();
@@ -109,8 +109,12 @@ namespace lab1
             Thread.Sleep(20);
             blockstate[curr.X, curr.Y] = State.visited;
 
-            paths = path(curr);
+            List<Point> potentialpaths = path(curr);
 
+            foreach(Point p in potentialpaths)
+            {
+                paths.Add(p);
+            }
             foreach(Point p in paths)
             {
                 Solve(p);
