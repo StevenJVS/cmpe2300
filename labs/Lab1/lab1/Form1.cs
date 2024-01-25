@@ -106,7 +106,7 @@ namespace lab1
                 return 0;
             }
             canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Purple);//paint canvas
-            Thread.Sleep(20);
+            Thread.Sleep(100);
             blockstate[curr.X, curr.Y] = State.visited;
 
             List<Point> points = new List<Point>();
@@ -116,9 +116,9 @@ namespace lab1
                 paths.Add(p);
             }
             
-            foreach (Point p in paths)
+            for(int y = 0; y < paths.Count; y++)
             {
-                Solve(p);
+                Solve(paths[y]);
             }
 
             if (paths.Count == 0)
