@@ -19,7 +19,7 @@ namespace lab1
         Thread solve;
         int steps = 0;
 
-        List<Point> paths = null;
+        List<Point> paths = new List<Point>();
         public Form1()
         {
             InitializeComponent();
@@ -109,7 +109,13 @@ namespace lab1
             Thread.Sleep(20);
             blockstate[curr.X, curr.Y] = State.visited;
 
-            paths = Path(curr);
+            List<Point> points = new List<Point>();
+            points = Path(curr);
+            foreach (Point p in points)
+            {
+                paths.Add(p);
+            }
+            
             foreach (Point p in paths)
             {
                 Solve(p);
@@ -128,25 +134,21 @@ namespace lab1
             {
                 nextpoint.X = nextpoint.X + 1;
                 path.Add(nextpoint);
-                Solve(nextpoint);
             }
             if (nextpoint.X-1 > 0 && blockstate[nextpoint.X - 1, nextpoint.Y] == State.open)
             {
                 nextpoint.X = nextpoint.X - 1;
                 path.Add(nextpoint);
-                Solve(nextpoint);
             }
             if (nextpoint.Y+1 < maze.Height && blockstate[nextpoint.X, nextpoint.Y + 1] == State.open)
             {
                 nextpoint.Y = nextpoint.Y + 1;
                 path.Add(nextpoint);
-                Solve(nextpoint);
             }
             if (nextpoint.Y-1 > 0 && blockstate[nextpoint.X, nextpoint.Y - 1] == State.open)
             {
                 nextpoint.Y = nextpoint.Y -1;
                 path.Add(nextpoint);
-                Solve(nextpoint);
             }
             return path;
         }
