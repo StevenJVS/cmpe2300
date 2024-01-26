@@ -12,14 +12,13 @@ namespace lab1
         Bitmap maze;
         CDrawer canvas;
         public enum State { open, wall, visited };
+        
         State[,] blockstate;
         Point start;
         Point end;
 
         Thread solve;
-        int steps = 0;
 
-        List<Point> paths = new List<Point>();
         public Form1()
         {
             InitializeComponent();
@@ -89,42 +88,55 @@ namespace lab1
             if (blockstate != null)
             {
                 solve = new Thread(CallSolve);
+                solve.IsBackground= true;
                 if(solve.ThreadState != ThreadState.Running)
                 solve.Start();
             }
         }
+
         public void CallSolve()
         {
-            Solve(start);
+            int steps = Solve(start);
         }
+
         public int Solve(Point curr)
-        {
-            if (curr.X == end.X && curr.Y == end.Y)
+        {           
+            if (curr == end) //win condition
                 return 1;
             if (curr.X < 0 || curr.X > maze.Width || curr.Y < 0 || curr.Y > maze.Height || blockstate[curr.X, curr.Y] == State.wall || blockstate[curr.X, curr.Y] == State.visited)
             {
                 return 0;
             }
-            canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Purple);//paint canvas
-            Thread.Sleep(100);
-            blockstate[curr.X, curr.Y] = State.visited;
-
-            List<Point> points = new List<Point>();
-            points = Path(curr);
-            foreach (Point p in points)
+            else
             {
-                paths.Add(p);
-            }
-            
-            for(int y = 0; y < paths.Count; y++)
-            {
-                Solve(paths[y]);
-            }
+                List<Point> points = Path(curr);
+                int totalSteps = 0;
 
-            if (paths.Count == 0)
-            { return 1; }
+                canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Purple);//paint canvas
+                blockstate[curr.X, curr.Y] = State.visited;
+                Thread.Sleep(100);
 
-            return 0;
+                if (points.Count > 0)
+                {
+                    foreach (Point p in points)
+                    {
+                        totalSteps += Solve(p);
+                        if (totalSteps > 0)
+                        { break; }
+                    }
+                }
+
+
+                if (totalSteps > 0)
+                { return 1 + totalSteps; }
+                else if(totalSteps == 0)
+                {
+                    canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Green);
+                    return 0;
+                }
+
+                return 0;
+            }
         }
         public List<Point> Path(Point nextpoint)
         {
