@@ -121,19 +121,21 @@ namespace lab1
                     foreach (Point p in points)
                     {
                         totalSteps += Solve(p);
-                        if (totalSteps > 0)
-                        { break; }
+/*                        if (totalSteps > 0)
+                        { break; }*/
                     }
                 }
 
 
-                if (totalSteps > 0)
+/*                if (totalSteps > 0)
                 { return 1 + totalSteps; }
+
+
                 else if(totalSteps == 0)
                 {
                     canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Green);
                     return 0;
-                }
+                }*/
 
                 return 0;
             }
