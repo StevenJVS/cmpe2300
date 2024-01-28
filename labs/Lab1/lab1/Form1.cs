@@ -1,5 +1,6 @@
 ﻿using GDIDrawer;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
@@ -13,11 +14,13 @@ namespace lab1
         CDrawer canvas;
         public enum State { open, wall, visited };
         
-        State[,] blockstate;
+        State[,] mazegrid;
         Point start;
         Point end;
 
         Thread solve;
+
+        public delegate void DisplayDelegate(int steps);
 
         public Form1()
         {
@@ -46,7 +49,7 @@ namespace lab1
                     UI_Display.Image = Image.FromFile(ofd.FileName);
                     UI_Message_txtbx.Text = $"Loaded: {maze.Width}x{maze.Height}";
                     UI_Solve_Btn.Enabled = true;
-                    blockstate = new State[maze.Width, maze.Height];
+                    mazegrid = new State[maze.Width, maze.Height];
 
                     //create canvas
                     canvas = new CDrawer(maze.Width * 10, maze.Height * 10);
@@ -59,12 +62,12 @@ namespace lab1
                             Color pixel = maze.GetPixel(i, j);
                             if (pixel.R == 255 && pixel.G == 255 && pixel.B == 255)
                             {
-                                blockstate[i, j] = State.open;
+                                mazegrid[i, j] = State.open;
                                 canvas.SetBBScaledPixel(i, j, pixel);
                             }
                             else if (pixel.R == 0 && pixel.G == 0 && pixel.B == 0)
                             {
-                                blockstate[i, j] = State.wall;
+                                mazegrid[i, j] = State.wall;
                                 canvas.SetBBScaledPixel(i, j, pixel);
                             }
                             else if (pixel.R == 0 && pixel.G == 255 && pixel.B == 0)
@@ -85,85 +88,82 @@ namespace lab1
 
         private void UI_Solve_Btn_Click(object sender, EventArgs e)
         {
-            if (blockstate != null)
+            if (mazegrid != null)
             {
                 solve = new Thread(CallSolve);
                 solve.IsBackground= true;
-                if(solve.ThreadState != ThreadState.Running)
-                solve.Start();
+                if (solve.ThreadState != ThreadState.Running)
+                    solve.Start();
+                else 
+                    UI_Message_txtbx.Text = "Solving thread is already running";
             }
         }
 
         public void CallSolve()
         {
             int steps = Solve(start);
+            DisplayDelegate display = Results;
+            Invoke(display, steps);
         }
-
+        public void Results(int steps)
+        {
+            if (steps > 0)
+            {
+                UI_Message_txtbx.Text = $"Maze was solved with {steps} Steps!";
+            }
+            else
+            {
+                UI_Message_txtbx.Text = "No solution";
+            }
+        }
         public int Solve(Point curr)
-        {           
-            if (curr == end) //win condition
+        {
+            if (curr == end) //win condition && last step
+            {
                 return 1;
-            if (curr.X < 0 || curr.X > maze.Width || curr.Y < 0 || curr.Y > maze.Height || blockstate[curr.X, curr.Y] == State.wall || blockstate[curr.X, curr.Y] == State.visited)
+            }
+            if (curr.X < 0 || curr.X > mazegrid.GetLength(0) || curr.Y < 0 || curr.Y > mazegrid.GetLength(1) || mazegrid[curr.X, curr.Y] == State.wall || mazegrid[curr.X, curr.Y] == State.visited)
             {
                 return 0;
             }
             else
             {
-                List<Point> points = Path(curr);
-                int totalSteps = 0;
+                List<Point> possiblepath = Path(curr);
 
                 canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Purple);//paint canvas
-                blockstate[curr.X, curr.Y] = State.visited;
-                Thread.Sleep(100);
+                mazegrid[curr.X, curr.Y] = State.visited;
+                Thread.Sleep(20);
 
-                if (points.Count > 0)
+                foreach (Point p in possiblepath)
                 {
-                    foreach (Point p in points)
+                    int results = Solve(p);
+                    if(results > 0)
                     {
-                        totalSteps += Solve(p);
-/*                        if (totalSteps > 0)
-                        { break; }*/
+
+                        Thread.Sleep(20);
+                        return 1 + results;
                     }
+                
                 }
-
-
-/*                if (totalSteps > 0)
-                { return 1 + totalSteps; }
-
-
-                else if(totalSteps == 0)
-                {
                     canvas.SetBBScaledPixel(curr.X, curr.Y, Color.Green);
                     return 0;
-                }*/
-
-                return 0;
             }
         }
         public List<Point> Path(Point nextpoint)
         {
             List<Point> path = new List<Point>();
 
-            if (nextpoint.X+1 < maze.Width && blockstate[nextpoint.X + 1, nextpoint.Y] == State.open)
-            {
-                nextpoint.X = nextpoint.X + 1;
-                path.Add(nextpoint);
-            }
-            if (nextpoint.X-1 > 0 && blockstate[nextpoint.X - 1, nextpoint.Y] == State.open)
-            {
-                nextpoint.X = nextpoint.X - 1;
-                path.Add(nextpoint);
-            }
-            if (nextpoint.Y+1 < maze.Height && blockstate[nextpoint.X, nextpoint.Y + 1] == State.open)
-            {
-                nextpoint.Y = nextpoint.Y + 1;
-                path.Add(nextpoint);
-            }
-            if (nextpoint.Y-1 > 0 && blockstate[nextpoint.X, nextpoint.Y - 1] == State.open)
-            {
-                nextpoint.Y = nextpoint.Y -1;
-                path.Add(nextpoint);
-            }
+            if (nextpoint.X - 1 >= 0 && mazegrid[nextpoint.X - 1, nextpoint.Y] == State.open)
+                path.Add(new Point(nextpoint.X - 1, nextpoint.Y));
+
+            if (nextpoint.X + 1 < mazegrid.GetLength(0) && mazegrid[nextpoint.X + 1, nextpoint.Y] == State.open)
+                path.Add(new Point(nextpoint.X + 1, nextpoint.Y));
+
+            if (nextpoint.Y - 1 >= 0 && mazegrid[nextpoint.X, nextpoint.Y - 1] == State.open)
+                path.Add(new Point(nextpoint.X, nextpoint.Y - 1));
+
+            if (nextpoint.Y + 1 < mazegrid.GetLength(1) && mazegrid[nextpoint.X, nextpoint.Y + 1] == State.open)
+                path.Add(new Point(nextpoint.X, nextpoint.Y + 1));
             return path;
         }
     }
