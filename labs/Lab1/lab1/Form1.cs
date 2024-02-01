@@ -35,7 +35,14 @@ namespace lab1
             //check if a picture was selected
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                maze = new Bitmap(ofd.FileName);//createa bitmap for the loaded maze
+                maze = new Bitmap(ofd.FileName);//createa bitmap for the loaded maze'
+
+                //stop and clear previous thread if a maze was previously solved
+                if (solve != null)
+                {
+                    solve.Abort();
+                    solve = null;
+                }
 
                 //check if the maze size is within bounds
                 if (maze.Width > 200 || maze.Height > 100)
@@ -105,7 +112,9 @@ namespace lab1
                     solve.IsBackground = true;//create thread to backgoround
                 }
                 if (!solve.IsAlive)//check if thread is already running
+                {
                     solve.Start();//start thread
+                }
                 else
                     UI_Message_txtbx.Text = "Solving thread is already running";//display if thread is already running
             }
