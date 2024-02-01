@@ -99,11 +99,14 @@ namespace lab1
             //check if there was a current maze in the 2d array
             if (mazegrid != null)
             {
-                solve = new Thread(CallSolve);//create thread
-                solve.IsBackground= true;//create thread to backgoround
+                if (solve == null)
+                {
+                    solve = new Thread(CallSolve);//create thread
+                    solve.IsBackground = true;//create thread to backgoround
+                }
                 if (!solve.IsAlive)//check if thread is already running
                     solve.Start();//start thread
-                else 
+                else
                     UI_Message_txtbx.Text = "Solving thread is already running";//display if thread is already running
             }
         }
