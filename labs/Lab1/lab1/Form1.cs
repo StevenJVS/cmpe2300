@@ -1,4 +1,12 @@
-﻿using GDIDrawer;
+﻿//***********************************************************************************
+//Program: Lab 1
+//Description: Maze solver
+//Date: 02/02/24
+//Author: Steven Santiago
+//Course: CMPE2300
+//Class: CNTA02
+//***********************************************************************************
+using GDIDrawer;
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
@@ -22,20 +30,22 @@ namespace lab1
 
         Thread solve;//solving thread
         public delegate void DisplayDelegate(int steps);//delegate to get the steps from solving thread
+        bool solving;//flag to check if the maze is being solved
 
         public Form1()
         {
             InitializeComponent();
         }
-
+        //Open file dialog
         private void UI_Load_Btn_Click(object sender, EventArgs e)
         {
+            solving = false;//initialize flag
             OpenFileDialog ofd = new OpenFileDialog();
 
             //check if a picture was selected
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                maze = new Bitmap(ofd.FileName);//createa bitmap for the loaded maze'
+                maze = new Bitmap(ofd.FileName);//create bitmap for the loaded maze
 
                 //stop and clear previous thread if a maze was previously solved
                 if (solve != null)
@@ -100,23 +110,22 @@ namespace lab1
                 }
             }
         }
-
+        //start maze solving thread
         private void UI_Solve_Btn_Click(object sender, EventArgs e)
         {
             //check if there was a current maze in the 2d array
             if (mazegrid != null)
             {
-                if (solve == null)
+                //check if the mazeis being solved
+                if (!solving)
                 {
                     solve = new Thread(CallSolve);//create thread
                     solve.IsBackground = true;//create thread to backgoround
-                }
-                if (!solve.IsAlive)//check if thread is already running
-                {
                     solve.Start();//start thread
+                    solving = true;//maze is being solved
                 }
                 else
-                    UI_Message_txtbx.Text = "Solving thread is already running";//display if thread is already running
+                    UI_Message_txtbx.Text = "Please load a new maze if the maze has been solved";//display if thread is already running
             }
         }
         /// <summary>
@@ -140,7 +149,6 @@ namespace lab1
                 UI_Message_txtbx.Text = $"Maze was solved with {steps} Steps!";
             else
                 UI_Message_txtbx.Text = "No solution";
-
         }
         /// <summary>
         /// analyze the current pixel and return if its a valid move
@@ -174,7 +182,6 @@ namespace lab1
                     if(results > 0)
                     {
                         //if path was found, add to steps
-                        Thread.Sleep(20);
                         return 1 + results;
                     }
                 
